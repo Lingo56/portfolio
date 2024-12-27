@@ -5,7 +5,7 @@ theme = 'risotto'
 
 [params]
   author = "Peter Soava"
-  productionBaseURL = "https://lingo56.github.io/portfolio/"
+  productionBaseURL = "https://lingo56.github.io/"
 
 [menu]
 
