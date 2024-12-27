@@ -1,11 +1,10 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://lingo56.github.io/portfolio/"
 languageCode = 'en-us'
 title = 'Peter Soava'
 theme = 'risotto'
 
 [params]
   author = "Peter Soava"
-  productionBaseURL = "https://lingo56.github.io/portfolio/"
 
 [menu]
 
