@@ -11,11 +11,11 @@ theme = 'risotto'
   [[menu.main]]
   identifier = "blog"
   name       = "Blog"
-  url        = "/portfolio/blog/"
+  url        = "/blog/"
   weight     = 1
 
   [[menu.main]]
   identifier = "projects"
   name       = "Projects"
-  url        = "/portfolio/projects/"
+  url        = "/projects/"
   weight     = 2
