@@ -59,7 +59,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "$(hugo config params.productionBaseURL)"          
+            --baseURL "$(hugo config | grep productionBaseURL | cut -d' ' -f2)"          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
