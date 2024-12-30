@@ -9,13 +9,7 @@ theme = 'risotto'
 [menu]
 
   [[menu.main]]
-  identifier = "blog"
-  name       = "Blog"
-  url        = "/blog/"
-  weight     = 1
-
-  [[menu.main]]
   identifier = "projects"
   name       = "Projects"
   url        = "/projects/"
-  weight     = 2
+  weight     = 1
