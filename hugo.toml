@@ -19,7 +19,7 @@ theme = 'risotto'
 
 [params.about]
   title = "Peter Soava"
-  description = "![An image of Peter Soava's face](./profile.jpg) Fourth-year Undergraduate at Simon Fraser University"
+  description = "![An image of Peter Soava's face](./images/profile.jpg) Fourth-year Undergraduate at Simon Fraser University"
 
 [[params.socialLinks]]
 icon = "fa-brands fa-github"
