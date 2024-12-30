@@ -3,14 +3,43 @@ languageCode = 'en-us'
 title = 'Peter Soava'
 theme = 'risotto'
 
+[[module.mounts]]
+  source = 'static'
+  target = 'static'
+
+[[module.mounts]]
+  source = 'images'
+  target = 'static/images'
+
 [params]
   author = "Peter Soava"
 
+[params.theme]
+  palette = "tokyo-night-dark"
+
 [params.about]
-  title = "risotto"
-  description = "A [hugo](https://gohugo.io) theme inspired by terminal ricing."
-  # or use an image:
-  logo_image = "images/profile.jpg"
+  title = "Peter Soava"
+  description = "![An image of Peter Soava's face](./profile.jpg) Fourth-year Undergraduate at Simon Fraser University"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-github"
+title = "GitHub"
+url = "https://github.com/Lingo56"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-itch-io"
+title = "Itch.io"
+url = "https://lingo56.itch.io/"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-linkedin"
+title = "LinkedIn"
+url = "https://www.linkedin.com/in/peter-soava/"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-envelope"
+title = "Email"
+url = "mailto:pgs2@sfu.ca"
 
 [menu]
 
