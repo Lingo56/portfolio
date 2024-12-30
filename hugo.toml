@@ -2,14 +2,11 @@ baseURL = "https://lingo56.github.io/portfolio/"
 languageCode = 'en-us'
 title = 'Peter Soava'
 theme = 'risotto'
+canonifyURLs = true
 
 [[module.mounts]]
   source = 'static'
   target = 'static'
-
-[[module.mounts]]
-  source = 'images'
-  target = 'static/images'
 
 [params]
   author = "Peter Soava"
@@ -19,32 +16,32 @@ theme = 'risotto'
 
 [params.about]
   title = "Peter Soava"
-  description = "![An image of Peter Soava's face](./images/profile.jpg) Fourth-year Undergraduate at Simon Fraser University"
+  description = "![An image of Peter Soava's face](/images/profile.jpg) Fourth-year Undergraduate at Simon Fraser University"
 
 [[params.socialLinks]]
-icon = "fa-brands fa-github"
-title = "GitHub"
-url = "https://github.com/Lingo56"
+  icon = "fa-brands fa-github"
+  title = "GitHub"
+  url = "https://github.com/Lingo56"
 
 [[params.socialLinks]]
-icon = "fa-brands fa-itch-io"
-title = "Itch.io"
-url = "https://lingo56.itch.io/"
+  icon = "fa-brands fa-itch-io"
+  title = "Itch.io"
+  url = "https://lingo56.itch.io/"
 
 [[params.socialLinks]]
-icon = "fa-brands fa-linkedin"
-title = "LinkedIn"
-url = "https://www.linkedin.com/in/peter-soava/"
+  icon = "fa-brands fa-linkedin"
+  title = "LinkedIn"
+  url = "https://www.linkedin.com/in/peter-soava/"
 
 [[params.socialLinks]]
-icon = "fa-solid fa-envelope"
-title = "Email"
-url = "mailto:pgs2@sfu.ca"
+  icon = "fa-solid fa-envelope"
+  title = "Email"
+  url = "mailto:pgs2@sfu.ca"
 
 [menu]
 
   [[menu.main]]
   identifier = "projects"
   name       = "Projects"
-  url        = "/projects/"
+  url        = "projects/"
   weight     = 1 
