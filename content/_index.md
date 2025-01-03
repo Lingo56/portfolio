@@ -4,6 +4,6 @@ draft = false
 title = 'Index'
 +++
 
-## Hello, I'm Peter
+## Hey, I'm Peter
 
-Coding things is pretty neat!
+programming is pretty neat!

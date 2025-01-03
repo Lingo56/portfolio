@@ -6,14 +6,56 @@
     <description>Recent content in Projects on Peter Soava</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Dec 2024 02:47:13 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Dec 2024 02:47:13 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/portfolio/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Project</title>
-      <link>http://localhost:1313/portfolio/projects/project-a/</link>
-      <pubDate>Fri, 27 Dec 2024 02:47:13 -0800</pubDate>
-      <guid>http://localhost:1313/portfolio/projects/project-a/</guid>
-      <description>&lt;h2 id=&#34;project-1&#34;&gt;Project 1&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!!@&lt;/p&gt;</description>
+      <title>Multithreaded Software Raytracer</title>
+      <link>http://localhost:1313/portfolio/projects/raytracing-app/</link>
+      <pubDate>Thu, 05 Dec 2024 02:47:13 -0800</pubDate>
+      <guid>http://localhost:1313/portfolio/projects/raytracing-app/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Center for Digital Media - Visual Database App</title>
+      <link>http://localhost:1313/portfolio/projects/cdm-app/</link>
+      <pubDate>Fri, 05 Apr 2024 02:47:13 -0800</pubDate>
+      <guid>http://localhost:1313/portfolio/projects/cdm-app/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Guided team through Unity development, providing key insights for how to craft shaders&#xA;and UI, resulting in a visually engaging and informative user experience.&lt;/li&gt;&#xA;&lt;li&gt;Implemented a robust networking solution to seamlessly connect with a remote MySQL&#xA;database, facilitating real-time server access to alumni data.&lt;/li&gt;&#xA;&lt;li&gt;Maintained project organization and effective team communication within a flat&#xA;structure&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Nvidia Reflex Analysis Project</title>
+      <link>http://localhost:1313/portfolio/projects/nvidia-reflex-app/</link>
+      <pubDate>Mon, 27 Nov 2023 02:47:13 -0800</pubDate>
+      <guid>http://localhost:1313/portfolio/projects/nvidia-reflex-app/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Developed critical data analysis programs in Python, utilizing SciPy, scikit-learn,&#xA;Matplotlib, and Nvidia FrameView to craft a precise latency analysis of various games.&lt;/li&gt;&#xA;&lt;li&gt;Provided graphics rendering expertise to achieve a cohesive group project execution&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>WebGL Model Viewer</title>
+      <link>http://localhost:1313/portfolio/projects/webgl-model-app/</link>
+      <pubDate>Sat, 05 Aug 2023 02:47:13 -0800</pubDate>
+      <guid>http://localhost:1313/portfolio/projects/webgl-model-app/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Enhanced visual quality and efficiency by seamlessly integrating multiple lights with Phong Shading in GLSL for optimal realism-performance balance.&lt;/li&gt;&#xA;&lt;li&gt;Engineered a camera system using matrix operations for precise mouse control, ensuring smooth navigation.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Sigterm - Top-Down Rogue-like Shooter Game</title>
+      <link>http://localhost:1313/portfolio/projects/sigterm-app/</link>
+      <pubDate>Thu, 03 Aug 2023 02:47:13 -0800</pubDate>
+      <guid>http://localhost:1313/portfolio/projects/sigterm-app/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Orchestrated a visually compelling experience within a Java-based Processing app, leveraging a GLSL background shader to heighten aesthetics and immersion.&lt;/li&gt;&#xA;&lt;li&gt;Implemented engaging enemy pathing and an upgrade system, akin to Vampire Survivors, to create an engrossing player experience.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Networked Food Database With UI</title>
+      <link>http://localhost:1313/portfolio/projects/food-db-app/</link>
+      <pubDate>Sun, 05 Dec 2021 02:47:13 -0800</pubDate>
+      <guid>http://localhost:1313/portfolio/projects/food-db-app/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Created a Java Swing-based desktop app facilitating user-friendly food database management with features like adding, removing, editing, and viewing entries.&#xA;-Seamlessly integrated Spring Boot REST API for networked database interaction,enhancing overall database accessibility.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Family Management Android App</title>
+      <link>http://localhost:1313/portfolio/projects/family-android-app/</link>
+      <pubDate>Fri, 03 Dec 2021 02:47:13 -0800</pubDate>
+      <guid>http://localhost:1313/portfolio/projects/family-android-app/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Developed in Android Studio with Java to offer users a comprehensive and efficient&#xA;toolset, such as a meditation timer and task tracker.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Used Git and Agile methodologies for efficient version control and responsive&#xA;development, contributing to a cohesive team project.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
