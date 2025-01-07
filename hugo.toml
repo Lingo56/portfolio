@@ -45,3 +45,7 @@ canonifyURLs = true
   name       = "Projects"
   url        = "projects/"
   weight     = 1 
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"

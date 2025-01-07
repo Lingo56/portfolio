@@ -2,6 +2,7 @@
 date = '2023-11-27T02:47:13-08:00'
 draft = false
 title = 'Nvidia Reflex Analysis Project'
+summary = "A report on the impact of Reflex and where it's most effective."
 +++
 
 - Developed critical data analysis programs in Python, utilizing SciPy, scikit-learn,

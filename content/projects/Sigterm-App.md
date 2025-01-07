@@ -1,7 +1,8 @@
 +++
 date = '2023-08-03T02:47:13-08:00'
 draft = false
-title = 'Sigterm - Top-Down Rogue-like Shooter Game'
+title = 'Sigterm'
+summary = "Abstract top-down arcade style shooter inspired by Vampire Survivors"
 +++
 
 - Orchestrated a visually compelling experience within a Java-based Processing app, leveraging a GLSL background shader to heighten aesthetics and immersion.

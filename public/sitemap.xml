@@ -17,6 +17,15 @@
     <loc>http://localhost:1313/portfolio/projects/nvidia-reflex-app/</loc>
     <lastmod>2023-11-27T02:47:13-08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/portfolio/tags/html5/</loc>
+    <lastmod>2023-08-05T02:47:13-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/</loc>
+    <lastmod>2023-08-05T02:47:13-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/webgl/</loc>
+    <lastmod>2023-08-05T02:47:13-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/portfolio/projects/webgl-model-app/</loc>
     <lastmod>2023-08-05T02:47:13-08:00</lastmod>
   </url><url>
@@ -30,7 +39,5 @@
     <lastmod>2021-12-03T02:47:13-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/tags/</loc>
   </url>
 </urlset>
