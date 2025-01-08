@@ -1,18 +1,18 @@
 {{ define "main" }}
+  {{ $styles := resources.Get "css/projects.css" | resources.Minify }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+
   <h1>Projects</h1>
 
   {{ range .Pages }}
-  <article>
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <!-- Show a short summary or description -->
-    <p>{{ .Summary }}</p>
-
-    <!-- Display tags below each project -->
-    <p class="tags">
-      {{ range .Params.tags }}
-        <a href="{{ printf "/tags/%s" . | urlize }}" class="tag">{{ . }}</a>
-      {{ end }}
-    </p>
-  </article>
+    <article>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p>
+        {{ .Summary }}<br />
+        {{ range .Params.tags }}
+          <a href="{{ printf "/tags/%s" . | urlize }}" class="tag">#{{ . }}</a>
+        {{ end }}
+      </p>
+    </article>
   {{ end }}
 {{ end }}

@@ -1,0 +1,11 @@
+article .tag {
+  color: #666 !important;           /* Muted color */
+  text-decoration: none;
+  margin-right: 0.5rem;
+  font-style: italic;
+}
+
+article .tag:hover {
+  color: #000 !important;           /* Darker color on hover */
+  text-decoration: underline;
+}

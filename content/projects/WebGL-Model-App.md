@@ -2,7 +2,7 @@
 date = '2023-08-05T02:47:13-08:00'
 draft = false
 title = 'WebGL Model Viewer'
-tags = ["HTML5", "WebGL"]
+tags = ["html5", "webgl"]
 summary = "Interactive model viewer with phong shading"
 +++
 
