@@ -5,22 +5,40 @@
     <loc>http://localhost:1313/portfolio/</loc>
     <lastmod>2024-12-27T02:47:13-08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/portfolio/tags/c&#43;&#43;/</loc>
+    <lastmod>2024-12-05T02:47:13-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/portfolio/projects/raytracing-app/</loc>
     <lastmod>2024-12-05T02:47:13-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/projects/</loc>
     <lastmod>2024-12-05T02:47:13-08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/portfolio/tags/</loc>
+    <lastmod>2024-12-05T02:47:13-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/c%23/</loc>
+    <lastmod>2024-04-05T02:47:13-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/portfolio/projects/cdm-app/</loc>
+    <lastmod>2024-04-05T02:47:13-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/mysql/</loc>
+    <lastmod>2024-04-05T02:47:13-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/unity/</loc>
     <lastmod>2024-04-05T02:47:13-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/projects/nvidia-reflex-app/</loc>
     <lastmod>2023-11-27T02:47:13-08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/portfolio/tags/python/</loc>
+    <lastmod>2023-11-27T02:47:13-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/portfolio/tags/html5/</loc>
     <lastmod>2023-08-05T02:47:13-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/tags/</loc>
+    <loc>http://localhost:1313/portfolio/tags/javascript/</loc>
     <lastmod>2023-08-05T02:47:13-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/tags/webgl/</loc>
@@ -29,11 +47,26 @@
     <loc>http://localhost:1313/portfolio/projects/webgl-model-app/</loc>
     <lastmod>2023-08-05T02:47:13-08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/portfolio/tags/glsl/</loc>
+    <lastmod>2023-08-03T02:47:13-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/java/</loc>
+    <lastmod>2023-08-03T02:47:13-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/portfolio/projects/sigterm-app/</loc>
     <lastmod>2023-08-03T02:47:13-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/projects/food-db-app/</loc>
     <lastmod>2021-12-05T02:47:13-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/springboot/</loc>
+    <lastmod>2021-12-05T02:47:13-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/swing/</loc>
+    <lastmod>2021-12-05T02:47:13-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/android-studio/</loc>
+    <lastmod>2021-12-03T02:47:13-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/projects/family-android-app/</loc>
     <lastmod>2021-12-03T02:47:13-08:00</lastmod>

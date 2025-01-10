@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Peter Soava</title>
+    <link>http://localhost:1313/portfolio/tags/python/</link>
+    <description>Recent content in Python on Peter Soava</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Nov 2023 02:47:13 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/portfolio/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nvidia Reflex Analysis Project</title>
+      <link>http://localhost:1313/portfolio/projects/nvidia-reflex-app/</link>
+      <pubDate>Mon, 27 Nov 2023 02:47:13 -0800</pubDate>
+      <guid>http://localhost:1313/portfolio/projects/nvidia-reflex-app/</guid>
+      <description>A data analysis project assisted by Python programs processing Nvidia FrameView telemetry.</description>
+    </item>
+  </channel>
+</rss>
