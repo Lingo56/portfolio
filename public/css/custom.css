@@ -19,3 +19,41 @@ a.tag:hover {
   color: var(--hover);
   text-decoration: underline;
 }
+
+/**********************************
+  MAIN PROJECTS
+**********************************/
+.main-projects {
+  padding: 1rem;
+  margin-bottom: 2rem;  /* space below this section */
+}
+
+.main-projects h1 {
+  font-size: 1.4rem;
+}
+
+.main-projects article {
+  margin: 1rem 0;
+  border-left: 4px solid var(--base08);
+  padding-left: 1rem;
+}
+
+/**********************************
+  ADDITIONAL (EXTRA) PROJECTS
+**********************************/
+.extra-projects {
+  padding: 1rem;
+}
+
+.extra-projects summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.extra-projects article {
+  margin: 1rem 0;
+  border-left: 4px solid;
+  padding-left: 1rem;
+}

@@ -3,7 +3,7 @@ date = '2023-11-27T02:47:13-08:00'
 draft = false
 title = 'Nvidia Reflex Analysis Project'
 tags = ["python"]
-summary = "A data analysis project assisted by Python programs processing Nvidia FrameView telemetry."
+summary = "Data analysis project assisted by Python programs processing Nvidia FrameView telemetry."
 +++
 
 - Developed critical data analysis programs in Python, utilizing SciPy, scikit-learn,

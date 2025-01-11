@@ -4,6 +4,7 @@ draft = false
 title = 'Family Management Android App'
 tags = ["java", "android-studio"]
 summary = "Mobile app with a variety of functions to aid with family organization."
+main = false
 +++
 
 - Developed in Android Studio with Java to offer users a comprehensive and efficient
