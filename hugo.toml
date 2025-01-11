@@ -15,7 +15,6 @@ canonifyURLs = true
   palette = "tokyo-night-dark"
 
 [params.about]
-  title = "Peter Soava"
   description = "![An image of Peter Soava's face](/images/profile.jpg) Fourth-year Undergraduate at Simon Fraser University"
 
 [[params.socialLinks]]

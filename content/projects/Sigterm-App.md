@@ -3,7 +3,7 @@ date = '2023-08-03T02:47:13-08:00'
 draft = false
 title = 'Sigterm'
 tags = ["java", "glsl"]
-summary = "Abstract top-down arcade style shooter inspired by Vampire Survivors."
+summary = "Abstract top-down arcade shooter inspired by Vampire Survivors."
 main = true
 +++
 
