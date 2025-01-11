@@ -4,6 +4,7 @@ draft = false
 title = 'WebGL Model Viewer'
 tags = ["html5", "javascript", "webgl"]
 summary = "Interactive model viewer with phong shading."
+main = true
 +++
 
 - Enhanced visual quality and efficiency by seamlessly integrating multiple lights with Phong Shading in GLSL for optimal realism-performance balance.

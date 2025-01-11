@@ -4,6 +4,7 @@ draft = false
 title = 'Sigterm'
 tags = ["java", "glsl"]
 summary = "Abstract top-down arcade style shooter inspired by Vampire Survivors."
+main = true
 +++
 
 - Orchestrated a visually compelling experience within a Java-based Processing app, leveraging a GLSL background shader to heighten aesthetics and immersion.

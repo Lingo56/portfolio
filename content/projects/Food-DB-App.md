@@ -4,6 +4,7 @@ draft = false
 title = 'Networked Food Database With UI'
 tags = ["java", "swing", "springboot"]
 summary = "App which stores a varity of food products."
+main = false
 +++
 
 - Created a Java Swing-based desktop app facilitating user-friendly food database management with features like adding, removing, editing, and viewing entries.

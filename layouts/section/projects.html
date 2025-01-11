@@ -1,13 +1,10 @@
 {{ define "main" }}
-  {{ $styles := resources.Get "css/projects.css" | resources.Minify }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
-
   <!-- Grab the main and side projects as before -->
   {{ $mainProjects := where .Pages "Params.main" true }}
   {{ $sideProjects := where .Pages "Params.main" false }}
 
   <!-- MAIN PROJECTS -->
-  <section class="main-projects">
+  <section class="mainpro">
     <h1>Core Projects</h1>
     {{ range $mainProjects }}
       <article>
@@ -23,7 +20,7 @@
   </section>
 
   <!-- ADDITIONAL PROJECTS -->
-  <section class="extra-projects">
+  <section class="extrapro">
     <details>
       <summary>Additional Projects</summary>
       {{ range $sideProjects }}

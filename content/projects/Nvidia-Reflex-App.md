@@ -4,6 +4,7 @@ draft = false
 title = 'Nvidia Reflex Analysis Project'
 tags = ["python"]
 summary = "Data analysis project assisted by Python programs processing Nvidia FrameView telemetry."
+main = true
 +++
 
 - Developed critical data analysis programs in Python, utilizing SciPy, scikit-learn,

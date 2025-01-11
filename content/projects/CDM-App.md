@@ -4,6 +4,7 @@ draft = false
 title = 'Center for Digital Media - Visual Database App'
 tags = ["unity", "mysql", "c#"]
 summary = "Interactive interface for browsing and interacting with CDM users."
+main = true
 +++
 
 
