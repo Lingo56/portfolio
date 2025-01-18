@@ -1,12 +1,33 @@
-<div style="display: flex; gap: 20px; flex-wrap: wrap">
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+  "
+>
   {{ range .Site.Data.projects }}
-  <div style="text-align: center">
-    <img
-      src="{{ .image }}"
-      alt="{{ .title }}"
-      style="width: 150px; height: 150px; object-fit: cover"
-    />
-    <p>{{ .title }}</p>
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    "
+  >
+    <a
+      href="/projects/{{ .title | urlize | lower }}/"
+      style="text-decoration: none"
+    >
+      <img
+        src="{{ .image }}"
+        alt="{{ .title }}"
+        style="width: 150px; height: 150px; object-fit: cover"
+      />
+      <p>{{ .title }}</p>
+    </a>
   </div>
   {{ end }}
 </div>
