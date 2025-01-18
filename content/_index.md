@@ -4,6 +4,12 @@ draft = false
 title = 'Index'
 +++
 
-# Hey, I'm Peter
+Hello, I’m Peter!  
+I specialize in graphics, tool, and game development.  
+Explore my projects below!
 
-programming is pretty neat!
+---
+
+# Highlight Projects
+
+{{< frontpage-projects >}}

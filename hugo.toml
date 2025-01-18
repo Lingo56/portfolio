@@ -12,7 +12,7 @@ canonifyURLs = true
   author = "Peter Soava"
 
 [params.theme]
-  palette = "tokyo-night-dark"
+  palette = "windows-95"
 
 [params.about]
   description = "![An image of Peter Soava's face](/images/profile.jpg) Fourth-year Undergraduate at Simon Fraser University"
