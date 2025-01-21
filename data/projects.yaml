@@ -1,6 +1,9 @@
 - title: Raytracing App
   image: /images/projects/Raytracing-App/Raytracing-App.png
+  description: Test description 1 Test description 1Test description 1Test description 1Test description 1Test description 1Test description 1
 - title: CDM App
   image: /images/projects/CDM-App/CDM-App.png
+  description: Test description 2
 - title: Nvidia Reflex App
   image: /images/projects/Nvidia-Reflex-App/Nvidia-Reflex-App.png
+  description: Test description 3

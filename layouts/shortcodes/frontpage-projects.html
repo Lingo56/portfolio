@@ -1,33 +1,48 @@
-<div
-  style="
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    text-align: center;
-  "
->
-  {{ range .Site.Data.projects }}
-  <div
-    style="
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    "
-  >
-    <a
-      href="/projects/{{ .title | urlize | lower }}/"
-      style="text-decoration: none"
-    >
-      <img
-        src="{{ .image }}"
-        alt="{{ .title }}"
-        style="width: 150px; height: 150px; object-fit: cover"
-      />
-      <p>{{ .title }}</p>
-    </a>
-  </div>
-  {{ end }}
-</div>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #000">
+  <tbody>
+    {{ range .Site.Data.projects }}
+    <tr style="border-bottom: 1px solid #000">
+      <td
+        style="
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+          border-right: 1px solid #000;
+          width: auto;
+          white-space: normal;
+        "
+      >
+        <a
+          href="/projects/{{ .title | urlize | lower }}/"
+          style="
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+          "
+        >
+          <img
+            src="{{ .image }}"
+            alt="{{ .title }}"
+            style="
+              width: 150px;
+              height: 150px;
+              object-fit: cover;
+              border: 1px solid #000;
+            "
+          />
+          <p style="margin: 0; text-align: center; max-width: 200px">
+            {{ .title }}
+          </p>
+        </a>
+      </td>
+      <td style="padding: 10px; text-align: left">{{ .description }}</td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>
