@@ -6,7 +6,7 @@
   "
 >
   <tbody>
-    {{ range .Site.Data.projects }}
+    {{ range .Site.Data.HighlightProjects }}
     <tr style="border-bottom: 0.1em solid var(--inner-bg)">
       <!-- Image + Title Column -->
       <td
@@ -19,12 +19,12 @@
         "
       >
         <a
-          href="/projects/{{ .title | urlize | lower }}/"
+          href="/projects/{{ .apptitle | urlize | lower }}/"
           style="text-decoration: none; display: block"
         >
           <img
             src="{{ .image }}"
-            alt="{{ .title }}"
+            alt="{{ .displaytitle }}"
             style="
               width: 80%;
               max-width: 8em;
@@ -33,7 +33,9 @@
               border: 0.1em solid var(--inner-bg);
             "
           />
-          <p style="margin: 0.5em 0 0; font-weight: bold">{{ .title }}</p>
+          <p style="margin: 0.5em 0 0; font-weight: bold">
+            {{ .displaytitle }}
+          </p>
         </a>
       </td>
 
