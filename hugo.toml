@@ -15,7 +15,7 @@ canonifyURLs = true
   palette = "windows-95"
 
 [params.about]
-  description = "![An image of Peter Soava's face](/images/profile.jpg) Fourth-year Undergraduate at Simon Fraser University"
+  description = "Fourth-year Undergraduate at Simon Fraser University"
 
 [[params.socialLinks]]
   icon = "fa-brands fa-github"

@@ -1,0 +1,44 @@
+{{ with .Site.Params.about }}
+<div class="aside__about">
+  {{ with .logo }}<span class="about__logo" role="img">{{ . }}</span>&nbsp;{{
+  end }} {{ with .logo_image }}<img
+    class="about__logo"
+    src="{{ . | absURL }}"
+    alt="Logo"
+  />{{ end }}
+  <h1 class="about__title">{{ .title }}</h1>
+
+  <canvas id="threejs-canvas" style="width: 100%; height: 300px"></canvas>
+
+  {{ with .description }}
+  <p class="about__description">{{ . | markdownify }}</p>
+  {{ end }}
+</div>
+{{ end }}
+
+<ul class="aside__social-links">
+  {{ range $item := .Site.Params.socialLinks }}
+  <li>
+    <a
+      href="{{ $item.url }}"
+      rel="me"
+      aria-label="{{ $item.title }}"
+      title="{{ $item.title }}"
+      ><i class="{{ $item.icon }}" aria-hidden="true"></i></a
+    >&nbsp;
+  </li>
+  {{ end }}
+</ul>
+
+<script>
+  const canvas = document.getElementById("threejs-canvas"); // Get the canvas element
+  const ctx = canvas.getContext("2d"); // Get the 2D context for drawing
+
+  // Set canvas width and height (in case the inline styles don't fully set it)
+  canvas.width = canvas.clientWidth;
+  canvas.height = canvas.clientHeight;
+
+  // Draw a red rectangle
+  ctx.fillStyle = "red";
+  ctx.fillRect(50, 50, 200, 100); // Parameters: x, y, width, height
+</script>
