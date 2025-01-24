@@ -30,15 +30,46 @@
   {{ end }}
 </ul>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-  const canvas = document.getElementById("threejs-canvas"); // Get the canvas element
-  const ctx = canvas.getContext("2d"); // Get the 2D context for drawing
+  window.onload = function () {
+    const canvas = document.getElementById("threejs-canvas");
+    if (!canvas) {
+      console.error("Canvas not found");
+      return;
+    }
 
-  // Set canvas width and height (in case the inline styles don't fully set it)
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
+    const renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      antialias: true,
+      alpha: true,
+    });
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    renderer.setClearColor(0x000000, 0);
 
-  // Draw a red rectangle
-  ctx.fillStyle = "red";
-  ctx.fillRect(50, 50, 200, 100); // Parameters: x, y, width, height
+    const scene = new THREE.Scene();
+
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      canvas.clientWidth / canvas.clientHeight,
+      0.1,
+      1000
+    );
+    camera.position.z = 2;
+
+    // Create a simple cube to test rendering
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+
+    function animate() {
+      requestAnimationFrame(animate);
+      cube.rotation.x += 0.001;
+      cube.rotation.y += 0.001;
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  };
 </script>

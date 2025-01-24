@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-<link rel="stylesheet" href="http://localhost:1313/portfolio/css/palettes/windows-95.css">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/css/palettes/gruvbox-dark.css">
 <link rel="stylesheet" href="http://localhost:1313/portfolio/css/risotto.css">
 <link rel="stylesheet" href="http://localhost:1313/portfolio/css/custom.css">
 
@@ -125,17 +125,48 @@
   
 </ul>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-  const canvas = document.getElementById("threejs-canvas"); 
-  const ctx = canvas.getContext("2d"); 
+  window.onload = function () {
+    const canvas = document.getElementById("threejs-canvas");
+    if (!canvas) {
+      console.error("Canvas not found");
+      return;
+    }
 
-  
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
+    const renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      antialias: true,
+      alpha: true,
+    });
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    renderer.setClearColor(0x000000, 0);
 
-  
-  ctx.fillStyle = "red";
-  ctx.fillRect(50, 50, 200, 100); 
+    const scene = new THREE.Scene();
+
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      canvas.clientWidth / canvas.clientHeight,
+      0.1,
+      1000
+    );
+    camera.position.z = 2;
+
+    
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+
+    function animate() {
+      requestAnimationFrame(animate);
+      cube.rotation.x += 0.001;
+      cube.rotation.y += 0.001;
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  };
 </script>
 </div>
                 <hr>
