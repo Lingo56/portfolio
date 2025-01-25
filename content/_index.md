@@ -6,14 +6,14 @@ title = 'Index'
 
 # About Me
 
+{{< spacer >}}
+
 Hello, I’m Peter!  
 I specialize in graphics, tool, and game development.  
 
 -------------------------------------------------------
 
 # Highlight Projects
-
-<div style="margin-bottom: 50px;"></div>
 
 {{< spacer >}}
 

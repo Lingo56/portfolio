@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-	<meta name="generator" content="Hugo 0.140.1"><script src="/portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=portfolio/livereload" data-no-instant defer></script><title>Index &ndash; Peter Soava</title>
+	<meta name="generator" content="Hugo 0.140.2"><script src="/portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=portfolio/livereload" data-no-instant defer></script><title>Index &ndash; Peter Soava</title>
 <meta name="description" content="Fourth-year Undergraduate at Simon Fraser University">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,11 +49,12 @@
 
             <section class="page__body">
     <h1 id="about-me">About Me</h1>
+<div style="height: 35px"></div>
+
 <p>Hello, I’m Peter!<br>
 I specialize in graphics, tool, and game development.</p>
 <hr>
 <h1 id="highlight-projects">Highlight Projects</h1>
-<!-- raw HTML omitted -->
 <div style="height: 35px"></div>
 
 <table
@@ -247,6 +248,18 @@ I specialize in graphics, tool, and game development.</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
   window.onload = function () {
+    const params = {
+      plane01: {
+        constant: 1,
+        negated: false,
+        displayHelper: true,
+      },
+
+      stencilMesh: {
+        z: 0,
+      },
+    };
+
     const canvas = document.getElementById("threejs-canvas");
     if (!canvas) {
       console.error("Canvas not found");
@@ -262,6 +275,7 @@ I specialize in graphics, tool, and game development.</p>
     renderer.setClearColor(0x000000, 0);
 
     const scene = new THREE.Scene();
+    const clock = new THREE.Clock();
 
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -272,18 +286,116 @@ I specialize in graphics, tool, and game development.</p>
     camera.position.z = 2;
 
     
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.9));
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+    dirLight.position.set(5, 10, 7.5);
+    dirLight.castShadow = true;
+    dirLight.shadow.camera.right = 2;
+    dirLight.shadow.camera.left = -2;
+    dirLight.shadow.camera.top = 2;
+    dirLight.shadow.camera.bottom = -2;
+    dirLight.shadow.mapSize.width = 1024;
+    dirLight.shadow.mapSize.height = 1024;
+    scene.add(dirLight);
+
+    function initCube() {
+      const addCubeFace = (
+        objectGeom,
+        objectColor,
+        stencilRef,
+        planePos,
+        planeRot
+      ) => {
+        
+        const planeGeom = new THREE.PlaneGeometry();
+        const stencilMat = new THREE.MeshPhongMaterial({ color: "white" });
+        stencilMat.depthWrite = false;
+        stencilMat.stencilWrite = true;
+        stencilMat.stencilRef = stencilRef;
+        stencilMat.stencilFunc = THREE.AlwaysStencilFunc;
+        stencilMat.stencilZPass = THREE.ReplaceStencilOp;
+        const stencilMesh = new THREE.Mesh(planeGeom, stencilMat);
+        stencilMesh.position.copy(planePos);
+        stencilMesh.rotation.x = planeRot.x;
+        stencilMesh.rotation.y = planeRot.y;
+        stencilMesh.rotation.z = planeRot.z;
+        stencilMesh.scale.multiplyScalar(0.9);
+        scene.add(stencilMesh);
+
+        
+        const objectMat = new THREE.MeshPhongMaterial({ color: objectColor });
+        objectMat.stencilWrite = true;
+        objectMat.stencilRef = stencilRef;
+        objectMat.stencilFunc = THREE.EqualStencilFunc;
+        const object = new THREE.Mesh(objectGeom, objectMat);
+        scene.add(object);
+      };
+
+      addCubeFace(
+        new THREE.ConeGeometry(0.25, 0.5, 4),
+        "red",
+        1,
+        new THREE.Vector3(0, 0, 0.5),
+        new THREE.Vector3(0, 0, 0)
+      );
+      addCubeFace(
+        new THREE.CylinderGeometry(0.15, 0.15, 0.5),
+        "yellow",
+        2,
+        new THREE.Vector3(0, 0.5, 0),
+        new THREE.Vector3(-Math.PI / 2, 0, 0)
+      );
+      addCubeFace(
+        new THREE.OctahedronGeometry(0.25),
+        "green",
+        3,
+        new THREE.Vector3(0, -0.5, 0),
+        new THREE.Vector3(Math.PI / 2, 0, 0)
+      );
+      addCubeFace(
+        new THREE.TorusGeometry(0.25, 0.1),
+        "blue",
+        4,
+        new THREE.Vector3(0, 0, -0.5),
+        new THREE.Vector3(Math.PI, 0, 0)
+      );
+      addCubeFace(
+        new THREE.ConeGeometry(0.25, 0.5),
+        "orange",
+        5,
+        new THREE.Vector3(-0.5, 0, 0),
+        new THREE.Vector3(0, -Math.PI / 2, 0)
+      );
+      addCubeFace(
+        new THREE.BoxGeometry(0.5, 0.5, 0.5),
+        "brown",
+        6,
+        new THREE.Vector3(0.5, 0, 0),
+        new THREE.Vector3(0, Math.PI / 2, 0)
+      );
+
+      const boxBorderMat = new THREE.MeshPhongMaterial({ color: 0x1a120b });
+      boxBorderMat.stencilWrite = true;
+      boxBorderMat.stencilRef = 0;
+      boxBorderMat.stencilFunc = THREE.EqualStencilFunc;
+      const boxBorderGeom = new THREE.BoxGeometry();
+      scene.add(new THREE.Mesh(boxBorderGeom, boxBorderMat));
+    }
 
     function animate() {
+      const delta = clock.getDelta();
+
       requestAnimationFrame(animate);
-      cube.rotation.x += 0.001;
-      cube.rotation.y += 0.001;
+
+      scene.rotation.x += 0.01; 
+      scene.rotation.y += 0.01; 
+
       renderer.render(scene, camera);
     }
 
+    
+    initCube();
     animate();
   };
 </script>
@@ -294,10 +406,7 @@ I specialize in graphics, tool, and game development.</p>
             </section>
 
             <footer class="page__footer"><p class="copyright"></p>
-<p class="advertisement">
-  Powered by <a href="https://gohugo.io/">hugo</a> and
-  <a href="https://github.com/joeroe/risotto">risotto</a>.
-</p>
+<p class="advertisement">Powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/joeroe/risotto">risotto</a>.</p>
 </footer>
 
         </div>
