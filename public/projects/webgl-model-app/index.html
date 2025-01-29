@@ -193,7 +193,7 @@
         stencilMesh.rotation.x = planeRot.x;
         stencilMesh.rotation.y = planeRot.y;
         stencilMesh.rotation.z = planeRot.z;
-        stencilMesh.scale.multiplyScalar(0.9);
+        stencilMesh.scale.multiplyScalar(1);
         scene.add(stencilMesh);
 
         
@@ -247,13 +247,6 @@
         new THREE.Vector3(0.5, 0, 0),
         new THREE.Vector3(0, Math.PI / 2, 0)
       );
-
-      const boxBorderMat = new THREE.MeshPhongMaterial({ color: 0x1a120b });
-      boxBorderMat.stencilWrite = true;
-      boxBorderMat.stencilRef = 0;
-      boxBorderMat.stencilFunc = THREE.EqualStencilFunc;
-      const boxBorderGeom = new THREE.BoxGeometry();
-      scene.add(new THREE.Mesh(boxBorderGeom, boxBorderMat));
     }
 
     function animate() {
