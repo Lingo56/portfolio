@@ -68,12 +68,13 @@
           text-align: center;
           border-right: 0.1em solid var(--inner-bg);
           width: auto;
-          white-space: normal;
+          word-wrap: normal; /* Allow words to break if too long */
+          white-space: normal; /* Allow text to wrap */
         "
       >
         <a
           href="http://localhost:1313/portfolio/projects/raytracing-app/"
-          style="text-decoration: none; display: block"
+          style="text-decoration: none; display: block; word-wrap: normal"
         >
           <img
             src="http://localhost:1313/portfolio/images/projects/Raytracing-App/Raytracing-App.png"
@@ -86,7 +87,14 @@
               border: 0.1em solid var(--inner-bg);
             "
           />
-          <p style="margin: 0.5em 0 0; font-weight: bold">
+          <p
+            style="
+              margin: 0.5em 0 0;
+              font-weight: bold;
+              word-wrap: normal; /* Allow words to break and wrap */
+              white-space: normal; /* Allow text to wrap within the element */
+            "
+          >
             Multithreaded Pathtracer
           </p>
         </a>
@@ -106,12 +114,13 @@
           text-align: center;
           border-right: 0.1em solid var(--inner-bg);
           width: auto;
-          white-space: normal;
+          word-wrap: normal; /* Allow words to break if too long */
+          white-space: normal; /* Allow text to wrap */
         "
       >
         <a
           href="http://localhost:1313/portfolio/projects/cdm-app/"
-          style="text-decoration: none; display: block"
+          style="text-decoration: none; display: block; word-wrap: normal"
         >
           <img
             src="http://localhost:1313/portfolio/images/projects/CDM-App/CDM-App.png"
@@ -124,7 +133,14 @@
               border: 0.1em solid var(--inner-bg);
             "
           />
-          <p style="margin: 0.5em 0 0; font-weight: bold">
+          <p
+            style="
+              margin: 0.5em 0 0;
+              font-weight: bold;
+              word-wrap: normal; /* Allow words to break and wrap */
+              white-space: normal; /* Allow text to wrap within the element */
+            "
+          >
             CDM App
           </p>
         </a>
@@ -144,12 +160,13 @@
           text-align: center;
           border-right: 0.1em solid var(--inner-bg);
           width: auto;
-          white-space: normal;
+          word-wrap: normal; /* Allow words to break if too long */
+          white-space: normal; /* Allow text to wrap */
         "
       >
         <a
           href="http://localhost:1313/portfolio/projects/nvidia-reflex-app/"
-          style="text-decoration: none; display: block"
+          style="text-decoration: none; display: block; word-wrap: normal"
         >
           <img
             src="http://localhost:1313/portfolio/images/projects/Nvidia-Reflex-App/Nvidia-Reflex-App.png"
@@ -162,7 +179,14 @@
               border: 0.1em solid var(--inner-bg);
             "
           />
-          <p style="margin: 0.5em 0 0; font-weight: bold">
+          <p
+            style="
+              margin: 0.5em 0 0;
+              font-weight: bold;
+              word-wrap: normal; /* Allow words to break and wrap */
+              white-space: normal; /* Allow text to wrap within the element */
+            "
+          >
             Nvidia Reflex Tools
           </p>
         </a>
@@ -298,13 +322,11 @@ I specialize in graphics, tool, and game development.</p>
     
     controls.addEventListener("start", () => {
       isInteracting = true;
-      console.log("Started dragging!");
     });
 
     
     controls.addEventListener("end", () => {
       isInteracting = false;
-      console.log("Stopped dragging!");
     });
 
     

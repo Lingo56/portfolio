@@ -15,12 +15,13 @@
           text-align: center;
           border-right: 0.1em solid var(--inner-bg);
           width: auto;
-          white-space: normal;
+          word-wrap: normal; /* Allow words to break if too long */
+          white-space: normal; /* Allow text to wrap */
         "
       >
         <a
           href="/projects/{{ .apptitle | urlize | lower }}/"
-          style="text-decoration: none; display: block"
+          style="text-decoration: none; display: block; word-wrap: normal"
         >
           <img
             src="{{ .image }}"
@@ -33,7 +34,14 @@
               border: 0.1em solid var(--inner-bg);
             "
           />
-          <p style="margin: 0.5em 0 0; font-weight: bold">
+          <p
+            style="
+              margin: 0.5em 0 0;
+              font-weight: bold;
+              word-wrap: normal; /* Allow words to break and wrap */
+              white-space: normal; /* Allow text to wrap within the element */
+            "
+          >
             {{ .displaytitle }}
           </p>
         </a>
