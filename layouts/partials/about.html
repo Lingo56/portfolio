@@ -78,6 +78,19 @@
     controls.rotateSpeed = 0.5;
     controls.zoomSpeed = 1.2;
     controls.enablePan = false;
+    let isInteracting = false; // Detect if canvas is being dragged
+
+    // Event listener to detect when interaction starts
+    controls.addEventListener("start", () => {
+      isInteracting = true;
+      console.log("Started dragging!");
+    });
+
+    // Event listener to detect when interaction ends
+    controls.addEventListener("end", () => {
+      isInteracting = false;
+      console.log("Stopped dragging!");
+    });
 
     // LIGHTS
     scene.add(new THREE.AmbientLight(0xffffff, 0.9));
@@ -169,13 +182,21 @@
       );
     }
 
+    function applyInertia() {
+      if (!isInteracting && Math.abs(rotationSpeedY) > 0.001) {
+        // Continue rotating with the last speed
+        scene.rotation.y += rotationSpeedY;
+        rotationSpeedY *= dampingFactor; // Apply damping
+      }
+    }
+
     function animate() {
       const delta = clock.getDelta();
 
       requestAnimationFrame(animate);
 
-      // Rotate only if OrbitControls isn't in use
-      if (!controls.isDragging) {
+      // Rotate the scene only if the user isn't interacting with the canvas
+      if (!isInteracting) {
         scene.rotation.y += 0.01;
       }
 

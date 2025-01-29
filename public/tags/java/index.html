@@ -173,6 +173,19 @@
     controls.rotateSpeed = 0.5;
     controls.zoomSpeed = 1.2;
     controls.enablePan = false;
+    let isInteracting = false; 
+
+    
+    controls.addEventListener("start", () => {
+      isInteracting = true;
+      console.log("Started dragging!");
+    });
+
+    
+    controls.addEventListener("end", () => {
+      isInteracting = false;
+      console.log("Stopped dragging!");
+    });
 
     
     scene.add(new THREE.AmbientLight(0xffffff, 0.9));
@@ -264,13 +277,22 @@
       );
     }
 
+    function applyInertia() {
+      if (!isInteracting && Math.abs(rotationSpeedY) > 0.001) {
+        
+        scene.rotation.y += rotationSpeedY;
+        rotationSpeedY *= dampingFactor; 
+      }
+    }
+
     function animate() {
       const delta = clock.getDelta();
 
       requestAnimationFrame(animate);
 
-      if (!controls.isDragging) {
-        scene.rotation.y += 0.01; 
+      
+      if (!isInteracting) {
+        scene.rotation.y += 0.01;
       }
 
       controls.update();
