@@ -5,7 +5,7 @@
 - displaytitle: CDM App
   apptitle: CDM-App
   image: /images/projects/CDM-App/CDM-App.png
-  description: A design-oriented database visualization app built in Unity with use of MariaDB. Built to visualize CDM users in a visually engaging and informative way.
+  description: A database visualization app built in Unity with use of MariaDB. Built to visualize CDM users in a visually engaging and informative way.
 - displaytitle: Nvidia Reflex Tools
   apptitle: Nvidia-Reflex-App
   image: /images/projects/Nvidia-Reflex-App/Nvidia-Reflex-App.png

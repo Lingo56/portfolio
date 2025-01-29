@@ -48,13 +48,7 @@
 </header>
 
             <section class="page__body">
-    <h1 id="about-me">About Me</h1>
-<div style="height: 35px"></div>
-
-<p>Hello, I’m Peter!<br>
-I specialize in graphics, tool, and game development.</p>
-<hr>
-<h1 id="highlight-projects">Highlight Projects</h1>
+    <h1 id="highlight-projects">Highlight Projects</h1>
 <div style="height: 35px"></div>
 
 <table
@@ -138,7 +132,7 @@ I specialize in graphics, tool, and game development.</p>
 
       
       <td style="padding: 1em; text-align: left; vertical-align: middle">
-        <p style="max-width: 40em; line-height: 1.5em">A design-oriented database visualization app built in Unity with use of MariaDB. Built to visualize CDM users in a visually engaging and informative way.</p>
+        <p style="max-width: 40em; line-height: 1.5em">A database visualization app built in Unity with use of MariaDB. Built to visualize CDM users in a visually engaging and informative way.</p>
       </td>
     </tr>
     
@@ -183,6 +177,12 @@ I specialize in graphics, tool, and game development.</p>
   </tbody>
 </table>
 
+<hr>
+<h1 id="about-me">About Me</h1>
+<div style="height: 35px"></div>
+
+<p>Hello, I’m Peter!<br>
+I specialize in graphics, tool, and game development.</p>
 
 
             </section>
@@ -246,6 +246,7 @@ I specialize in graphics, tool, and game development.</p>
 </ul>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 <script>
   window.onload = function () {
     const params = {
@@ -286,6 +287,14 @@ I specialize in graphics, tool, and game development.</p>
     camera.position.z = 2;
 
     
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.rotateSpeed = 0.5;
+    controls.zoomSpeed = 1.2;
+    controls.enablePan = false;
+
+    
     scene.add(new THREE.AmbientLight(0xffffff, 0.9));
 
     const dirLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -320,7 +329,6 @@ I specialize in graphics, tool, and game development.</p>
         stencilMesh.rotation.x = planeRot.x;
         stencilMesh.rotation.y = planeRot.y;
         stencilMesh.rotation.z = planeRot.z;
-        stencilMesh.scale.multiplyScalar(1);
         scene.add(stencilMesh);
 
         
@@ -381,9 +389,11 @@ I specialize in graphics, tool, and game development.</p>
 
       requestAnimationFrame(animate);
 
-      scene.rotation.x += 0.01; 
-      scene.rotation.y += 0.01; 
+      if (!controls.isDragging) {
+        scene.rotation.y += 0.01; 
+      }
 
+      controls.update();
       renderer.render(scene, camera);
     }
 

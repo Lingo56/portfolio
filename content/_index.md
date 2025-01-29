@@ -4,17 +4,17 @@ draft = false
 title = 'Index'
 +++
 
+# Highlight Projects
+
+{{< spacer >}}
+
+{{< frontpage-projects >}}
+
+-------------------------------------------------------
+
 # About Me
 
 {{< spacer >}}
 
 Hello, I’m Peter!  
 I specialize in graphics, tool, and game development.  
-
--------------------------------------------------------
-
-# Highlight Projects
-
-{{< spacer >}}
-
-{{< frontpage-projects >}}

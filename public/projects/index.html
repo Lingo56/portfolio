@@ -212,6 +212,7 @@
 </ul>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 <script>
   window.onload = function () {
     const params = {
@@ -252,6 +253,14 @@
     camera.position.z = 2;
 
     
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.rotateSpeed = 0.5;
+    controls.zoomSpeed = 1.2;
+    controls.enablePan = false;
+
+    
     scene.add(new THREE.AmbientLight(0xffffff, 0.9));
 
     const dirLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -286,7 +295,6 @@
         stencilMesh.rotation.x = planeRot.x;
         stencilMesh.rotation.y = planeRot.y;
         stencilMesh.rotation.z = planeRot.z;
-        stencilMesh.scale.multiplyScalar(1);
         scene.add(stencilMesh);
 
         
@@ -347,9 +355,11 @@
 
       requestAnimationFrame(animate);
 
-      scene.rotation.x += 0.01; 
-      scene.rotation.y += 0.01; 
+      if (!controls.isDragging) {
+        scene.rotation.y += 0.01; 
+      }
 
+      controls.update();
       renderer.render(scene, camera);
     }
 
