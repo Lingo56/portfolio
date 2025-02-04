@@ -4,7 +4,7 @@ draft = false
 title = 'Index'
 +++
 
-# Highlight Projects
+## Highlight Projects
 
 {{< spacer >}}
 
@@ -12,7 +12,7 @@ title = 'Index'
 
 -------------------------------------------------------
 
-# About Me
+## About Me
 
 {{< spacer >}}
 
