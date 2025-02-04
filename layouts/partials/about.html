@@ -91,12 +91,16 @@
     });
 
     function initCube() {
+      const textureLoader = new THREE.TextureLoader();
+
       const addCubeFace = (
         objectGeom,
         objectColor,
         stencilRef,
         planePos,
-        planeRot
+        planeRot,
+        isTextured = false,
+        texturePath = ""
       ) => {
         // CUBE FACE
         const planeGeom = new THREE.PlaneGeometry();
@@ -114,12 +118,44 @@
         scene.add(stencilMesh);
 
         // OBJECT INSIDE CUBE
-        const objectMat = new THREE.MeshBasicMaterial({ color: objectColor });
-        objectMat.stencilWrite = true;
-        objectMat.stencilRef = stencilRef;
-        objectMat.stencilFunc = THREE.EqualStencilFunc;
-        const object = new THREE.Mesh(objectGeom, objectMat);
-        scene.add(object);
+        if (isTextured) {
+          // Load and apply texture
+          textureLoader.load(texturePath, function (texture) {
+            texture.flipY = false;
+            const texturedPlaneGeom = new THREE.PlaneGeometry(0.5, 0.5);
+
+            const texturedPlaneMat = new THREE.MeshBasicMaterial({
+              map: texture,
+              transparent: true,
+            });
+
+            // Apply stencil settings
+            texturedPlaneMat.stencilWrite = true;
+            texturedPlaneMat.stencilRef = stencilRef;
+            texturedPlaneMat.stencilFunc = THREE.EqualStencilFunc;
+
+            const texturedPlane = new THREE.Mesh(
+              texturedPlaneGeom,
+              texturedPlaneMat
+            );
+
+            texturedPlane.position
+              .copy(planePos)
+              .add(new THREE.Vector3(0, 0, 0.4));
+
+            texturedPlane.rotation.set(planeRot.x, planeRot.y, planeRot.z);
+            scene.add(texturedPlane);
+          });
+        } else {
+          // Standard 3D object inside the cube
+          const objectMat = new THREE.MeshBasicMaterial({ color: objectColor });
+          objectMat.stencilWrite = true;
+          objectMat.stencilRef = stencilRef;
+          objectMat.stencilFunc = THREE.EqualStencilFunc;
+
+          const object = new THREE.Mesh(objectGeom, objectMat);
+          scene.add(object);
+        }
       };
 
       addCubeFace(
@@ -144,11 +180,13 @@
         new THREE.Vector3(Math.PI / 2, 0, 0)
       );
       addCubeFace(
-        new THREE.ConeGeometry(0.25, 0.5),
-        "orange",
+        null,
+        null,
         4,
         new THREE.Vector3(0, 0, -0.5),
-        new THREE.Vector3(Math.PI, 0, 0)
+        new THREE.Vector3(Math.PI, 0, 0),
+        true,
+        "./images/cat.png"
       );
       addCubeFace(
         new THREE.TorusGeometry(0.25, 0.1),
