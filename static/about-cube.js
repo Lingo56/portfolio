@@ -26,7 +26,6 @@ window.onload = function () {
   renderer.setClearColor(0x000000, 0);
 
   const scene = new THREE.Scene();
-  const clock = new THREE.Clock();
 
   const camera = new THREE.PerspectiveCamera(
     75,
@@ -36,12 +35,28 @@ window.onload = function () {
   );
   camera.position.z = 2;
 
+  // Update camera aspect ratio and renderer size on window resize
+  function onWindowResize() {
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+
+    // Update camera aspect and renderer size
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+  }
+
+  window.addEventListener("resize", onWindowResize, false);
+
+  // Set initial camera aspect ratio and renderer size
+  onWindowResize(); // Ensures initial configuration on load
+
   // CONTROLS
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
   controls.dampingFactor = 0.05;
   controls.rotateSpeed = 0.5;
-  controls.zoomSpeed = 1.2;
+  controls.enableZoom = false;
   controls.enablePan = false;
   let isInteracting = false; // Detect if canvas is being dragged
 
@@ -169,20 +184,10 @@ window.onload = function () {
     );
   }
 
-  function applyInertia() {
-    if (!isInteracting && Math.abs(rotationSpeedY) > 0.001) {
-      // Continue rotating with the last speed
-      scene.rotation.y += rotationSpeedY;
-      rotationSpeedY *= dampingFactor; // Apply damping
-    }
-  }
-
   function animate() {
-    const delta = clock.getDelta();
-
     requestAnimationFrame(animate);
 
-    // Rotate the scene only if the user isn't interacting with the canvas
+    // Only rotate the scene if user is not interacting
     if (!isInteracting) {
       scene.rotation.y += 0.01;
     }
@@ -191,7 +196,7 @@ window.onload = function () {
     renderer.render(scene, camera);
   }
 
-  // initPlanes();
+  // Initialize the cube and start the animation loop
   initCube();
   animate();
 };
