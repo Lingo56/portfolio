@@ -2,54 +2,81 @@
   style="
     width: 100%;
     border-collapse: collapse;
-    border: 0.1em solid var(--inner-bg);
+    background-color: var(--inner-bg);
+    color: var(--fg);
   "
 >
   <tbody>
     {{ range .Site.Data.HighlightProjects }}
-    <tr style="border-bottom: 0.1em solid var(--inner-bg)">
-      <!-- Image + Title Column -->
-      <td
-        style="
-          padding: 1em;
-          text-align: center;
-          border-right: 0.1em solid var(--inner-bg);
-          width: auto;
-          word-wrap: normal; /* Allow words to break if too long */
-          white-space: normal; /* Allow text to wrap */
-        "
-      >
-        <a
-          href="/projects/{{ .apptitle | urlize | lower }}/"
-          style="text-decoration: none; display: block; word-wrap: normal"
-        >
-          <img
-            src="{{ .image }}"
-            alt="{{ .displaytitle }}"
-            style="
-              width: 80%;
-              max-width: 8em;
-              aspect-ratio: 1/1;
-              object-fit: cover;
-              border: 0.1em solid var(--inner-bg);
-            "
-          />
-          <p
-            style="
-              margin: 0.5em 0 0;
-              font-weight: bold;
-              word-wrap: normal; /* Allow words to break and wrap */
-              white-space: normal; /* Allow text to wrap within the element */
-            "
-          >
-            {{ .displaytitle }}
-          </p>
-        </a>
+    <tr
+      style="
+        background-color: var(--inner-bg);
+        transition: background-color 0.2s;
+        cursor: pointer;
+      "
+      onmouseover="this.style.backgroundColor='var(--muted)'"
+      onmouseout="this.style.backgroundColor='var(--inner-bg)'"
+      onclick="window.location='/portfolio/projects/{{ .apptitle | urlize | lower }}/'"
+    >
+      <!-- Image Column -->
+      <td style="padding: 1em; width: 18%; vertical-align: middle">
+        <img
+          src="{{ .image }}"
+          alt="{{ .displaytitle }}"
+          style="
+            width: 100%;
+            max-width: 8em;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border: 0.1em solid var(--inner-bg);
+          "
+        />
       </td>
 
-      <!-- Description Column -->
-      <td style="padding: 1em; text-align: left; vertical-align: middle">
-        <p style="max-width: 40em; line-height: 1.5em">{{ .description }}</p>
+      <!-- Title & Description Column -->
+      <td style="padding: 1em; width: 82%; vertical-align: middle">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              font-size: normal;
+              font-weight: bold;
+              color: var(--link);
+              margin-bottom: 0.5em;
+            "
+          >
+            <span>{{ .displaytitle }}</span>
+            <span
+              style="
+                font-style: italic;
+                font-size: smaller;
+                color: var(--off-fg);
+              "
+            >
+              {{ .type }}
+            </span>
+          </div>
+          <p
+            style="
+              margin: 0;
+              color: var(--off-fg);
+              font-size: normal;
+              line-height: 1.5em;
+              max-width: 40em;
+            "
+          >
+            {{ .description }}
+          </p>
+        </div>
       </td>
     </tr>
     {{ end }}

@@ -12,7 +12,7 @@ canonifyURLs = true
   author = "Peter Soava"
 
 [params.theme]
-  palette = "gruvbox-dark"
+  palette = "base16-dark"
 
 [params.about]
   description = "Fourth-year Undergraduate at Simon Fraser University"
