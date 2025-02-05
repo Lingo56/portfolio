@@ -1,16 +1,4 @@
 window.onload = function () {
-  const params = {
-    plane01: {
-      constant: 1,
-      negated: false,
-      displayHelper: true,
-    },
-
-    stencilMesh: {
-      z: 0,
-    },
-  };
-
   const canvas = document.getElementById("threejs-canvas");
   if (!canvas) {
     console.error("Canvas not found");
@@ -22,34 +10,49 @@ window.onload = function () {
     antialias: true,
     alpha: true,
   });
+
   renderer.setSize(canvas.clientWidth, canvas.clientHeight);
   renderer.setClearColor(0x000000, 0);
 
   const scene = new THREE.Scene();
 
+  // Create the camera with initial aspect ratio
   const camera = new THREE.PerspectiveCamera(
     75,
     canvas.clientWidth / canvas.clientHeight,
     0.1,
     1000
   );
-  camera.position.z = 2;
+  camera.position.set(0, 0, 2); // Camera position
+  camera.lookAt(new THREE.Vector3(0, 0, 0)); // Look at the center
 
-  // Update camera aspect ratio and renderer size on window resize
-  function onWindowResize() {
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
+  function resizeCanvas() {
+    const parent = canvas.parentElement;
+    const width = parent.clientWidth; // Get width of the parent
+    let height = canvas.clientHeight; // Get height of the parent
 
-    // Update camera aspect and renderer size
+    // If the parent height isn't updating properly, fall back to window's height
+    if (height === 0) {
+      height = window.innerHeight; // Use the window's inner height as a fallback
+    }
+
+    // Set the canvas size
+    canvas.width = width;
+    canvas.height = height;
+
+    // Update camera aspect ratio and projection matrix
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
+
+    // Resize the renderer to match the canvas size
     renderer.setSize(width, height);
   }
 
-  window.addEventListener("resize", onWindowResize, false);
+  // Handle window resize events
+  window.addEventListener("resize", resizeCanvas, false);
 
-  // Set initial camera aspect ratio and renderer size
-  onWindowResize(); // Ensures initial configuration on load
+  // Ensure the canvas size is set properly on load
+  resizeCanvas();
 
   // CONTROLS
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -58,14 +61,11 @@ window.onload = function () {
   controls.rotateSpeed = 0.5;
   controls.enableZoom = false;
   controls.enablePan = false;
-  let isInteracting = false; // Detect if canvas is being dragged
 
-  // Event listener to detect when interaction starts
+  let isInteracting = false; // Detect if canvas is being dragged
   controls.addEventListener("start", () => {
     isInteracting = true;
   });
-
-  // Event listener to detect when interaction ends
   controls.addEventListener("end", () => {
     isInteracting = false;
   });
@@ -82,7 +82,6 @@ window.onload = function () {
       isTextured = false,
       texturePath = ""
     ) => {
-      // CUBE FACE
       const planeGeom = new THREE.PlaneGeometry();
       const stencilMat = new THREE.MeshBasicMaterial({ color: "white" });
       stencilMat.depthWrite = false;
@@ -92,14 +91,10 @@ window.onload = function () {
       stencilMat.stencilZPass = THREE.ReplaceStencilOp;
       const stencilMesh = new THREE.Mesh(planeGeom, stencilMat);
       stencilMesh.position.copy(planePos);
-      stencilMesh.rotation.x = planeRot.x;
-      stencilMesh.rotation.y = planeRot.y;
-      stencilMesh.rotation.z = planeRot.z;
+      stencilMesh.rotation.set(planeRot.x, planeRot.y, planeRot.z);
       scene.add(stencilMesh);
 
-      // OBJECT INSIDE CUBE
       if (isTextured) {
-        // Load and apply texture
         textureLoader.load(texturePath, function (texture) {
           texture.flipY = false;
           const texturedPlaneGeom = new THREE.PlaneGeometry(0.5, 0.5);
@@ -109,7 +104,6 @@ window.onload = function () {
             transparent: true,
           });
 
-          // Apply stencil settings
           texturedPlaneMat.stencilWrite = true;
           texturedPlaneMat.stencilRef = stencilRef;
           texturedPlaneMat.stencilFunc = THREE.EqualStencilFunc;
@@ -127,7 +121,6 @@ window.onload = function () {
           scene.add(texturedPlane);
         });
       } else {
-        // Standard 3D object inside the cube
         const objectMat = new THREE.MeshBasicMaterial({ color: objectColor });
         objectMat.stencilWrite = true;
         objectMat.stencilRef = stencilRef;
@@ -138,6 +131,7 @@ window.onload = function () {
       }
     };
 
+    // Add faces to the cube, all centered at (0, 0, 0)
     addCubeFace(
       new THREE.ConeGeometry(0.25, 0.5, 4),
       "red",

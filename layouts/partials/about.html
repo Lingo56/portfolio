@@ -1,5 +1,5 @@
 {{ with .Site.Params.about }}
-<div class="aside__about">
+<div class="aside__about" style="height: 100vh">
   {{ with .logo }}<span class="about__logo" role="img">{{ . }}</span>&nbsp;{{
   end }} {{ with .logo_image }}<img
     class="about__logo"
@@ -8,7 +8,7 @@
   />{{ end }}
   <h1 class="about__title">{{ .title }}</h1>
 
-  <canvas id="threejs-canvas" style="width: 100%; height: 300px"></canvas>
+  <canvas id="threejs-canvas" style="width: 100%; height: 100vh"></canvas>
 
   {{ with .description }}
   <p class="about__description">{{ . | markdownify }}</p>
