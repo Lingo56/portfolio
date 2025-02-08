@@ -19,7 +19,7 @@
       onclick="window.location='/portfolio/projects/{{ .apptitle | urlize | lower }}/'"
     >
       <!-- Image Column -->
-      <td style="padding: 1em; width: 22%; vertical-align: middle">
+      <td style="padding: 1em; vertical-align: middle">
         <div
           style="
             display: flex;
@@ -32,8 +32,7 @@
             src="{{ .image }}"
             alt="{{ .displaytitle }}"
             style="
-              width: 100%;
-              max-width: 8em;
+              max-width: 5em;
               aspect-ratio: 1/1;
               object-fit: cover;
               border: 0.1em solid var(--inner-bg);
@@ -44,7 +43,7 @@
       </td>
 
       <!-- Title & Description Column -->
-      <td style="padding: 1em; width: 78%; vertical-align: middle">
+      <td style="padding: 1em; vertical-align: middle">
         <div
           style="
             display: flex;
