@@ -19,39 +19,24 @@
       onclick="window.location='/portfolio/projects/{{ .apptitle | urlize | lower }}/'"
     >
       <!-- Image Column -->
-      <td style="padding: 1em; vertical-align: middle">
-        <div
+      <td style="padding: 1em; vertical-align: middle; text-align: center">
+        <img
+          src="{{ .image }}"
+          alt="{{ .displaytitle }}"
           style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
+            max-width: 5em;
+            max-height: 5em;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border: 0.1em solid var(--inner-bg);
+            display: block;
           "
-        >
-          <img
-            src="{{ .image }}"
-            alt="{{ .displaytitle }}"
-            style="
-              max-width: 5em;
-              aspect-ratio: 1/1;
-              object-fit: cover;
-              border: 0.1em solid var(--inner-bg);
-              display: block;
-            "
-          />
-        </div>
+        />
       </td>
 
       <!-- Title & Description Column -->
       <td style="padding: 1em; vertical-align: middle">
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-          "
-        >
+        <div>
           <div
             style="
               display: flex;
@@ -61,6 +46,7 @@
               font-weight: bold;
               color: var(--link);
               margin-bottom: 0.5em;
+              flex-wrap: wrap;
             "
           >
             <span>{{ .displaytitle }}</span>
@@ -70,9 +56,9 @@
                 font-size: smaller;
                 color: var(--off-fg);
                 white-space: nowrap;
-                overflow: visible;
-                flex-shrink: 0;
-                min-width: fit-content;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                min-width: auto;
               "
             >
               {{ .type }}
@@ -84,7 +70,8 @@
               color: var(--off-fg);
               font-size: normal;
               line-height: 1.5em;
-              max-width: 40em;
+              max-width: 100%;
+              word-wrap: break-word;
             "
           >
             {{ .description }}

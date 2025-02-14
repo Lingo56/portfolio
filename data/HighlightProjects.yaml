@@ -1,9 +1,9 @@
-- displaytitle: Multithreaded Pathtracer
+- displaytitle: Multithreaded Ray Tracer
   apptitle: Raytracing-App
   type: C++
   image: /images/projects/Raytracing-App/Raytracing-App.png
-  description: Software pathtracer with support for multithreading and MPI.
-- displaytitle: CDM App
+  description: Software ray tracer with support for multithreading and MPI.
+- displaytitle: Center for Digital Media - Visual Database App
   apptitle: CDM-App
   type: Unity
   image: /images/projects/CDM-App/CDM-App.png
