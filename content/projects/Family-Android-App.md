@@ -4,11 +4,14 @@ draft = false
 title = 'Family Management Android App'
 tags = ["java", "android-studio"]
 summary = "Mobile app with a variety of functions to aid with family organization."
+image = "/images/projects/Family-Android-App/Family-Android-App.png"
 main = false
 +++
 
+## Project Details
+
 - Developed in Android Studio with Java to offer users a comprehensive and efficient
-toolset, such as a meditation timer and task tracker.
+  toolset, such as a meditation timer and task tracker.
 
 - Used Git and Agile methodologies for efficient version control and responsive
-development, contributing to a cohesive team project.
+  development, contributing to a cohesive team project.

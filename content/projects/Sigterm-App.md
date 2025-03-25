@@ -8,5 +8,17 @@ image = "/images/projects/Sigterm-App/Sigterm-App.png"
 main = true
 +++
 
+{{< spacer >}}
+
+{{< youtube NQhVULRnP1A >}}
+
+{{< spacer >}}
+
+## Project Details
+
 - Orchestrated a visually compelling experience within a Java-based Processing app, leveraging a GLSL background shader to heighten aesthetics and immersion.
 - Implemented engaging enemy pathing and an upgrade system, akin to Vampire Survivors, to create an engrossing player experience.
+
+## GitHub Repository
+
+Check out the [source code on GitHub](https://github.com/Lingo56/Sigterm).

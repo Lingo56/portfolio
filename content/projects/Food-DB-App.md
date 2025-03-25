@@ -7,5 +7,7 @@ summary = "App which stores a varity of food products."
 main = false
 +++
 
+## Project Details
+
 - Created a Java Swing-based desktop app facilitating user-friendly food database management with features like adding, removing, editing, and viewing entries.
 - Seamlessly integrated Spring Boot REST API for networked database interaction,enhancing overall database accessibility.

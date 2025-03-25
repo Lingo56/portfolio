@@ -8,5 +8,11 @@ image = "/images/projects/Raytracing-App/Raytracing-App.png"
 main = true
 +++
 
+## Project Details
+
 - Optimized a Monte Carlo ray tracer with C++ expression templates and a quasi-random algorithm for improved performance and visual quality.
 - Rewrote ray tracing algorithm for multithreading and distributed computing, allowing significant performance gains over the original single-threaded implementation.
+
+## GitHub Repository
+
+Check out the [source code on GitHub](https://github.com/Lingo56/mpi-raytrace).

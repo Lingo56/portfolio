@@ -8,6 +8,8 @@ image = "/images/projects/CDM-App/CDM-App.png"
 main = true
 +++
 
+## Project Details
+
 - Guided team through Unity development, providing key insights for how to craft shaders
   and UI, resulting in a visually engaging and informative user experience.
 - Implemented a robust networking solution to seamlessly connect with a remote MySQL

@@ -8,6 +8,8 @@ image = "/images/projects/Nvidia-Reflex-App/Nvidia-Reflex-App.png"
 main = true
 +++
 
+## Project Details
+
 - Developed critical data analysis programs in Python, utilizing SciPy, scikit-learn,
   Matplotlib, and Nvidia FrameView to craft a precise latency analysis of various games.
 
