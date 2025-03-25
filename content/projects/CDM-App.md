@@ -3,7 +3,7 @@ date = '2024-04-05T02:47:13-08:00'
 draft = false
 title = 'Center for Digital Media - Visual Database App'
 tags = ["unity", "mysql", "c♯"]
-summary = "Interactive interface for browsing and interacting with CDM users."
+summary = "A platform for showcasing CDM user data through design-foward visualizations."
 image = "/images/projects/CDM-App/CDM-App.png"
 main = true
 +++

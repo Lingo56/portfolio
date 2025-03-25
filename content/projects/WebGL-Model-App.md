@@ -4,6 +4,7 @@ draft = false
 title = 'WebGL Model Viewer'
 tags = ["html5", "javascript", "webgl"]
 summary = "Interactive model viewer with phong shading."
+image = "/images/projects/WebGL-Model-App/WebGL-Model-App.png"
 main = true
 +++
 

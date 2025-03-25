@@ -4,6 +4,7 @@ draft = false
 title = 'Sigterm'
 tags = ["java", "glsl"]
 summary = "Abstract top-down arcade shooter inspired by Vampire Survivors."
+image = "/images/projects/Sigterm-App/Sigterm-App.png"
 main = true
 +++
 
