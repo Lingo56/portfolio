@@ -160,7 +160,9 @@ window.onload = function () {
       new THREE.Vector3(0, -0.5, 0),
       new THREE.Vector3(Math.PI / 2, 0, 0),
       true,
-      "/portfolio/images/cat.png"
+      window.location.pathname.includes("/portfolio/")
+        ? "/portfolio/images/cat.png"
+        : "/images/cat.png"
     );
     addCubeFace(
       new THREE.TorusGeometry(0.25, 0.1),
