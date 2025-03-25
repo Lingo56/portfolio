@@ -7,5 +7,13 @@ summary = "Interactive model viewer with phong shading."
 main = true
 +++
 
+{{< webgl-viewer >}}
+
+## Project Details
+
 - Enhanced visual quality and efficiency by seamlessly integrating multiple lights with Phong Shading in GLSL for optimal realism-performance balance.
 - Engineered a camera system using matrix operations for precise mouse control, ensuring smooth navigation.
+
+## GitHub Repository
+
+Check out the [source code on GitHub](https://github.com/Lingo56/WebGL-Viewer).
