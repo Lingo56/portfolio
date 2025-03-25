@@ -11,8 +11,9 @@ canonifyURLs = true
 [params]
   author = "Peter Soava"
 
+
 [params.theme]
-  palette = "base16-dark"
+  palette = "tokyo-night-light"
 
 [params.about]
   description = "Fourth-year Undergraduate at Simon Fraser University"

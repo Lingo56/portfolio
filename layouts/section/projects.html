@@ -1,39 +1,82 @@
 {{ define "main" }}
-  <!-- Grab the main and side projects as before -->
-  {{ $mainProjects := where .Pages "Params.main" true }}
-  {{ $sideProjects := where .Pages "Params.main" false }}
+<!-- Get all projects, regardless of main parameter -->
+{{ $allProjects := .Pages }}
 
-  <!-- MAIN PROJECTS -->
-  <section class="mainpro">
-    <h1>Core Projects</h1>
-    {{ range $mainProjects }}
-      <article>
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <p>
-          {{ .Summary }}<br />
-          {{ range .Params.tags }}
-            <a href="{{ printf "/tags/%s" . | urlize }}" class="tag">#{{ . }}</a>
-          {{ end }}
-        </p>
-      </article>
-    {{ end }}
-  </section>
+<!-- ALL PROJECTS -->
+<section>
+  <h1>Projects</h1>
+  <!-- Add spacer div similar to what might be in _index.md -->
+  <div style="height: 1.5em"></div>
 
-  <!-- ADDITIONAL PROJECTS -->
-  <section class="extrapro">
-    <details>
-      <summary>Additional Projects</summary>
-      {{ range $sideProjects }}
-        <article>
-          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-          <p>
-            {{ .Summary }}<br />
-            {{ range .Params.tags }}
-              <a href="{{ printf "/tags/%s" . | urlize }}" class="tag">#{{ . }}</a>
-            {{ end }}
-          </p>
-        </article>
+  <table
+    style="
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--off-bg);
+      color: var(--fg);
+    "
+  >
+    <tbody>
+      {{ range $allProjects }}
+      <tr
+        style="
+          background-color: var(--inner-bg);
+          transition: background-color 0.2s;
+          cursor: pointer;
+        "
+        onmouseover="this.style.backgroundColor='var(--muted)'"
+        onmouseout="this.style.backgroundColor='var(--inner-bg)'"
+        onclick="window.location='{{ .Permalink }}'"
+      >
+        <!-- Title & Description Column -->
+        <td style="padding: 1em; vertical-align: middle">
+          <div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: normal;
+                font-weight: bold;
+                color: var(--link);
+                margin-bottom: 0.5em;
+                flex-wrap: wrap;
+              "
+            >
+              <span>{{ .Title }}</span>
+            </div>
+            <p
+              style="
+                margin: 0;
+                color: var(--fg);
+                font-size: normal;
+                line-height: 1.5em;
+                max-width: 100%;
+                word-wrap: break-word;
+              "
+            >
+              {{ .Summary }}
+            </p>
+            <div style="margin-top: 0.5em">
+              {{ range .Params.tags }}
+              <a
+                href="{{ printf "/tags/%s" . | urlize }}"
+                class="tag"
+                style="
+                  display: inline-block;
+                  margin-right: 0.5em;
+                  font-size: smaller;
+                  color: var(--off-fg);
+                "
+                >#{{ . }}</a
+              >
+              {{ end }}
+            </div>
+          </div>
+        </td>
+      </tr>
       {{ end }}
-    </details>
-  </section>
+    </tbody>
+  </table>
+</section>
 {{ end }}
