@@ -28,6 +28,22 @@
         onmouseout="this.style.backgroundColor='var(--inner-bg)'"
         onclick="window.location='{{ .Permalink }}'"
       >
+        <!-- Image Column -->
+        <td style="padding: 1em; vertical-align: middle; text-align: center">
+          <img
+            src="{{ with .Params.image }}{{ . }}{{ else }}/images/project-default.png{{ end }}"
+            alt="{{ .Title }}"
+            style="
+              max-width: 5em;
+              max-height: 5em;
+              aspect-ratio: 1/1;
+              object-fit: cover;
+              border: 0.1em solid var(--inner-bg);
+              display: block;
+            "
+          />
+        </td>
+
         <!-- Title & Description Column -->
         <td style="padding: 1em; vertical-align: middle">
           <div>
@@ -44,6 +60,21 @@
               "
             >
               <span>{{ .Title }}</span>
+              {{ with .Params.projectType }}
+              <span
+                style="
+                  font-style: italic;
+                  font-size: smaller;
+                  color: var(--off-fg);
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  min-width: auto;
+                "
+              >
+                {{ . }}
+              </span>
+              {{ end }}
             </div>
             <p
               style="
@@ -58,9 +89,10 @@
               {{ .Summary }}
             </p>
             <div style="margin-top: 0.5em">
-              {{ range .Params.tags }}
+              {{ range .Params.tags }} {{ $tagURL := printf "/tags/%s" (. |
+              urlize) }}
               <a
-                href="{{ printf "/tags/%s" . | urlize }}"
+                href="{{ $tagURL }}"
                 class="tag"
                 style="
                   display: inline-block;

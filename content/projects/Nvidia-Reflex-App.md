@@ -4,10 +4,11 @@ draft = false
 title = 'Nvidia Reflex Analysis Project'
 tags = ["python"]
 summary = "Data analysis project assisted by Python programs processing Nvidia FrameView telemetry."
+image = "/images/projects/Nvidia-Reflex-App/Nvidia-Reflex-App.png"
 main = true
 +++
 
 - Developed critical data analysis programs in Python, utilizing SciPy, scikit-learn,
-Matplotlib, and Nvidia FrameView to craft a precise latency analysis of various games.
+  Matplotlib, and Nvidia FrameView to craft a precise latency analysis of various games.
 
 - Provided graphics rendering expertise to achieve a cohesive group project execution

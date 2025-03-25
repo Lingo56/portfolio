@@ -4,5 +4,6 @@ draft = false
 title = 'Multithreaded Software Raytracer'
 tags = ["c++"]
 summary = "Software raytracing renderer accelerated with various multithreading methods."
+image = "/images/projects/Raytracing-App/Raytracing-App.png"
 main = true
 +++
