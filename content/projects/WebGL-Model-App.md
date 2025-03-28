@@ -10,6 +10,14 @@ main = true
 
 {{< webgl-viewer >}}
 
+- **Translate X and Y:** Left click + mouse
+- **Rotate Z and X:** Right click + mouse
+- **Translate Z:** Up + Down keys
+- **Rotate Y:** Right + Left keys
+- **Reset model location:** R
+- **Pause lights:** P
+- **Pause spotlight:** S
+
 ## Project Details
 
 My final project for SFU's Intro to Computer Graphics class. Everything here is written by me besides a couple libraries for matrix manipulation.
