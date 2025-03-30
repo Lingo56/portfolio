@@ -8,6 +8,12 @@ image = "/images/projects/Nvidia-Reflex-App/Nvidia-Reflex-App.png"
 main = true
 +++
 
+{{< banner-images
+src1="/images/projects/Nvidia-Reflex-App/Multigame_GPULow.png"
+alt1="Low GPU Load"
+src2="/images/projects/Nvidia-Reflex-App/Multigame_GPUHigh.png"
+alt2="High GPU Load" >}}
+
 ## Project Details
 
 Final project for CMPT 353 - Computational Data Science
@@ -19,22 +25,19 @@ Final project for CMPT 353 - Computational Data Science
 
 ### Key Findings
 
-1. **Latency Reduction**:
+1. **Latency Reduction**:  
+   Reflex can significantly reduce latency, especially under high GPU load conditions. This was confirmed by t-tests with near-zero p-values.
 
-   - Reflex can significantly reduce latency, especially under high GPU load conditions. This was confirmed by t-tests with near-zero p-values.
+2. **Impact of Graphics Settings**:  
+   Reflex minimizes the increase in latency caused by higher graphical settings, with regression analysis showing a much lower slope for Reflex On compared to Reflex Off.
 
-2. **Impact of Graphics Settings**:
-
-   - Reflex minimizes the increase in latency caused by higher graphical settings, with regression analysis showing a much lower slope for Reflex On compared to Reflex Off.
-
-3. **Consistency Across Games**:
-   - Reflex's effectiveness is consistent across different games under high GPU load but shows minimal impact under low GPU load.
+3. **Consistency Across Games**:  
+   Reflex's effectiveness is consistent across different games under high GPU load but shows minimal impact under low GPU load.
 
 ### Challenges and Limitations
 
 - **Hardware Variability**: The analysis did not account for differences in hardware configurations, which could influence Reflex's effectiveness.
 - **Shader Caching**: Some data may have been affected by stuttering due to uncompiled shaders during benchmarking.
-- **Scope Constraints**: Due to page limits, the report only includes a fraction of the detailed analysis conducted.
 
 ### Tools and Techniques
 
@@ -44,4 +47,4 @@ Final project for CMPT 353 - Computational Data Science
 
 ## GitHub Repository
 
-Check out the [source code on GitHub](https://github.com/Lingo56/Nvidia-Reflex-Analysis).
+Check out the [source code on GitHub](https://github.com/cbrad2001/cmpt353prj).

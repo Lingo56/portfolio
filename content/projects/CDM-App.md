@@ -24,10 +24,4 @@ main = true
 
 - Adapted to unclear project direction and solved problems without direct guides, improving confidence in tackling unknowns.
 - Enhanced communication skills by collaborating with a diverse team of designers and clients unfamiliar with 3D development.
-- Addressed technical challenges, such as integrating Unity with the database and creating performant shaders.
-
-### Future Improvements
-
-- Fill data gaps in the alumni database and integrate survey responses.
-- Enhance the web visualization to better align with designer concepts and connect to the database.
-- Explore advanced Discord integration for improved alumni networking features.
+- Addressed technical challenges, such as integrating Unity with a database and creating performant shaders.
