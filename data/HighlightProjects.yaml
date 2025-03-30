@@ -7,7 +7,7 @@
   apptitle: CDM-App
   type: Unity
   image: /images/projects/CDM-App/CDM-App.png
-  description: A platform for showcasing CDM user data through design-foward visualizations.
+  description: A database platform for showcasing CDM student data through design-foward visualizations.
 - displaytitle: Nvidia Reflex Tools
   apptitle: Nvidia-Reflex-App
   type: Python

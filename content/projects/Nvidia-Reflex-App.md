@@ -10,7 +10,38 @@ main = true
 
 ## Project Details
 
-- Developed critical data analysis programs in Python, utilizing SciPy, scikit-learn,
-  Matplotlib, and Nvidia FrameView to craft a precise latency analysis of various games.
+Final project for CMPT 353 - Computational Data Science
 
-- Provided graphics rendering expertise to achieve a cohesive group project execution
+- Developed critical data analysis programs in Python, utilizing SciPy, scikit-learn, Matplotlib, and Nvidia FrameView to analyze PC latency across various games.
+- Investigated the impact of Nvidia Reflex on input latency under different GPU loads and graphical settings.
+- Filtered and refined large datasets using machine learning techniques like LocalOutlierFactor to remove anomalies and smooth latency data.
+- Conducted statistical tests (t-tests, chi-squared tests) to confirm the significance of Reflex's impact on latency reduction.
+
+### Key Findings
+
+1. **Latency Reduction**:
+
+   - Reflex can significantly reduce latency, especially under high GPU load conditions. This was confirmed by t-tests with near-zero p-values.
+
+2. **Impact of Graphics Settings**:
+
+   - Reflex minimizes the increase in latency caused by higher graphical settings, with regression analysis showing a much lower slope for Reflex On compared to Reflex Off.
+
+3. **Consistency Across Games**:
+   - Reflex's effectiveness is consistent across different games under high GPU load but shows minimal impact under low GPU load.
+
+### Challenges and Limitations
+
+- **Hardware Variability**: The analysis did not account for differences in hardware configurations, which could influence Reflex's effectiveness.
+- **Shader Caching**: Some data may have been affected by stuttering due to uncompiled shaders during benchmarking.
+- **Scope Constraints**: Due to page limits, the report only includes a fraction of the detailed analysis conducted.
+
+### Tools and Techniques
+
+- **Data Collection**: Used Nvidia FrameView to capture telemetry data, focusing on PC latency and frame timing.
+- **Data Visualization**: Created clear and informative graphs using Matplotlib, with Loess smoothing for better readability.
+- **Machine Learning**: Applied anomaly detection to refine datasets and ensure accurate analysis.
+
+## GitHub Repository
+
+Check out the [source code on GitHub](https://github.com/Lingo56/Nvidia-Reflex-Analysis).

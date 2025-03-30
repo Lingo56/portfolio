@@ -16,8 +16,12 @@ main = true
 
 ## Project Details
 
-- Orchestrated a visually compelling experience within a Java-based Processing app, leveraging a GLSL background shader to heighten aesthetics and immersion.
-- Implemented engaging enemy pathing and an upgrade system, akin to Vampire Survivors, to create an engrossing player experience.
+Final project for IAT 167 - Intro to Game Development
+
+- Built in Processing using Java
+- Implemented a GLSL shader for the background
+- Designed unique enemy behaviors and attack patterns per-stage
+- Developed an economy system to have players trade off what upgrades to prioritize
 
 ## GitHub Repository
 
