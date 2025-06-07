@@ -8,6 +8,12 @@ image = "/images/projects/Raytracing-App/Raytracing-App.png"
 main = true
 +++
 
+{{< spacer >}}
+
+{{< banner-images
+src1="/images/projects/Raytracing-App/Raytracing-App.png"
+alt1="Low GPU Load" >}}
+
 ## Project Details
 
 Final project for CMPT 433 - Distributed Computing

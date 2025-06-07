@@ -8,6 +8,8 @@ image = "/images/projects/Nvidia-Reflex-App/Nvidia-Reflex-App.png"
 main = true
 +++
 
+{{< spacer >}}
+
 {{< banner-images
 src1="/images/projects/Nvidia-Reflex-App/Multigame_GPULow.png"
 alt1="Low GPU Load"
