@@ -10,13 +10,7 @@ main = true
 
 {{< webgl-viewer >}}
 
-- **Translate X and Y:** Left click + mouse
-- **Rotate Z and X:** Right click + mouse
-- **Translate Z:** Up + Down keys
-- **Rotate Y:** Right + Left keys
-- **Reset model location:** R
-- **Pause lights:** P
-- **Pause spotlight:** S
+{{< webgl-controls-table >}}
 
 ## Project Details
 
@@ -24,17 +18,17 @@ Final project for CMPT 361 - Intro to Computer Graphics
 
 Everything here is written by me besides a couple libraries for matrix manipulation.
 
-### Lighting and Shading
+Lighting and Shading
 
 - Implemented Blinn-Phong shading for realistic lighting effects.
 - Solved specular highlight issues from overlapping lights by rewriting the specular calculation to simply add instead of overcomplicating it with various multiplication steps.
 
-### Model Loading
+Model Loading
 
 - Debugged many issues with loading the demo model and calculating normals.
 - Fixed a critical issue where the depth buffer was not being cleared each frame, which caused the demo model to always load with broken vertices.
 
-### Camera and Spotlight
+Camera and Spotlight
 
 - Implemented perspective camera utilizing matrix operations.
 - Overcame challenges in placing and rotating lights, particularly the spotlight, through notable trial and error.

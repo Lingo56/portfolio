@@ -8,6 +8,8 @@ image = "/images/projects/CDM-App/CDM-App.png"
 main = true
 +++
 
+{{< spacer >}}
+
 {{< video-player src="/videos/cdm-reel-compressed.mp4" poster="/images/video-poster.png" >}}
 
 ## Project Details
