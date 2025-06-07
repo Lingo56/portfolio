@@ -8,6 +8,8 @@ image = "/images/projects/CDM-App/CDM-App.png"
 main = true
 +++
 
+{{< video-player src="/videos/cdm-reel-compressed.mp4" poster="/images/video-poster.png" >}}
+
 ## Project Details
 
 - Guided team through Unity development, providing key insights for crafting shaders and UI, resulting in a visually engaging and informative user experience.

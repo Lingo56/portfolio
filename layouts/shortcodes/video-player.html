@@ -1,0 +1,25 @@
+<div id="video-container-{{ .Get "id" | default (now.UnixNano) }}" style="position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; background:#000;">
+  <video
+    id="myVideo-{{ .Get "id" | default (now.UnixNano) }}"
+    src="{{ .Get "src" }}"
+    autoplay
+    loop
+    muted
+    playsinline
+    style="width:100%; height:100%; object-fit:cover; display:block; background:#000; transition:opacity 0.5s;"
+    poster="{{ .Get "poster" }}"
+  ></video>
+</div>
+<script>
+(function() {
+  var video = document.getElementById('myVideo-{{ .Get "id" | default (now.UnixNano) }}');
+  if (!video) return;
+  video.addEventListener('timeupdate', function() {
+    if (video.duration - video.currentTime < 0.5) {
+      video.style.opacity = 0.2;
+    } else if (video.currentTime < 0.2) {
+      video.style.opacity = 1;
+    }
+  });
+})();
+</script>
