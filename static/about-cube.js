@@ -48,6 +48,31 @@ window.onload = function () {
     renderer.setSize(width, height);
   }
 
+  function loadTexture(url, callback) {
+    const img = new window.Image();
+    img.crossOrigin = "anonymous";
+    img.onload = function () {
+      const size = Math.max(img.width, img.height);
+      const canvas = document.createElement("canvas");
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = "white";
+      ctx.fillRect(0, 0, size, size);
+      ctx.drawImage(
+        img,
+        (size - img.width) / 2,
+        (size - img.height) / 2,
+        img.width,
+        img.height
+      );
+      const texture = new THREE.Texture(canvas);
+      texture.needsUpdate = true;
+      callback(texture);
+    };
+    img.src = url;
+  }
+
   // Handle window resize events
   window.addEventListener("resize", resizeCanvas, false);
 
@@ -80,7 +105,7 @@ window.onload = function () {
       planePos,
       planeRot,
       isTextured = false,
-      texturePath = ""
+      texture = ""
     ) => {
       const planeGeom = new THREE.PlaneGeometry();
       const stencilMat = new THREE.MeshBasicMaterial({ color: "white" });
@@ -94,32 +119,30 @@ window.onload = function () {
       stencilMesh.rotation.set(planeRot.x, planeRot.y, planeRot.z);
       scene.add(stencilMesh);
 
-      if (isTextured) {
-        textureLoader.load(texturePath, function (texture) {
-          texture.flipY = false;
-          const texturedPlaneGeom = new THREE.PlaneGeometry(0.5, 0.5);
+      if (isTextured && texture) {
+        texture.flipY = false;
+        const texturedPlaneGeom = new THREE.PlaneGeometry(0.8, 0.8);
 
-          const texturedPlaneMat = new THREE.MeshBasicMaterial({
-            map: texture,
-            transparent: true,
-          });
-
-          texturedPlaneMat.stencilWrite = true;
-          texturedPlaneMat.stencilRef = stencilRef;
-          texturedPlaneMat.stencilFunc = THREE.EqualStencilFunc;
-
-          const texturedPlane = new THREE.Mesh(
-            texturedPlaneGeom,
-            texturedPlaneMat
-          );
-
-          texturedPlane.position
-            .copy(planePos)
-            .add(new THREE.Vector3(0, 0.4, 0));
-
-          texturedPlane.rotation.set(planeRot.x, planeRot.y, planeRot.z);
-          scene.add(texturedPlane);
+        const texturedPlaneMat = new THREE.MeshBasicMaterial({
+          map: texture,
+          transparent: true,
         });
+
+        texturedPlaneMat.stencilWrite = true;
+        texturedPlaneMat.stencilRef = stencilRef;
+        texturedPlaneMat.stencilFunc = THREE.EqualStencilFunc;
+
+        const texturedPlane = new THREE.Mesh(
+          texturedPlaneGeom,
+          texturedPlaneMat
+        );
+
+        texturedPlane.position
+          .copy(planePos)
+          .add(new THREE.Vector3(0, 0.35, 0));
+        texturedPlane.rotation.set(planeRot.x, planeRot.y, planeRot.z);
+
+        scene.add(texturedPlane);
       } else {
         const objectMat = new THREE.MeshBasicMaterial({ color: objectColor });
         objectMat.stencilWrite = true;
@@ -153,17 +176,23 @@ window.onload = function () {
       new THREE.Vector3(0, 0, -0.5),
       new THREE.Vector3(Math.PI, 0, 0)
     );
-    addCubeFace(
-      null,
-      null,
-      3,
-      new THREE.Vector3(0, -0.5, 0),
-      new THREE.Vector3(Math.PI / 2, 0, 0),
-      true,
-      window.location.pathname.includes("/portfolio/")
-        ? "/portfolio/images/cat.png"
-        : "/images/cat.png"
-    );
+
+    const catImgUrl = window.location.pathname.includes("/portfolio/")
+      ? "/portfolio/images/cat.png"
+      : "/images/cat.png";
+
+    loadTexture(catImgUrl, function (texture) {
+      addCubeFace(
+        null,
+        null,
+        3,
+        new THREE.Vector3(0, -0.5, 0),
+        new THREE.Vector3(Math.PI / 2, 0, 0),
+        true,
+        texture
+      );
+    });
+
     addCubeFace(
       new THREE.TorusGeometry(0.25, 0.1),
       "blue",
