@@ -16,6 +16,10 @@ main = true
 
 Workshop built for the SFU Game Development Club
 
+## Overview
+
+{{< spacer >}}
+
 - Thoroughly researched numerous algorithms to build a water shader implementaion that was both easy to teach and visually impressive
 - Designed presentation to teach attendees the modern GPU pipeline and how impressive visuals are crafted from a low level
 

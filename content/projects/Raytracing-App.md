@@ -18,6 +18,10 @@ alt1="Low GPU Load" >}}
 
 Final project for CMPT 433 - Distributed Computing
 
+## Overview
+
+{{< spacer >}}
+
 - Improved Monte Carlo ray distribution with a quasi-random randomization algorithm for improved performance and visual quality.
 - Rewrote ray tracing algorithm for multithreading and distributed computing, allowing significant performance gains over the original single-threaded implementation.
 - Implemented dynamic mapping for threads and static mapping for MPI to balance workloads for each solution effectively.

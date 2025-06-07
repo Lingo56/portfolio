@@ -18,6 +18,10 @@ Final project for CMPT 361 - Intro to Computer Graphics
 
 Everything here is written by me besides a couple libraries for matrix manipulation.
 
+## Overview
+
+{{< spacer >}}
+
 Lighting and Shading
 
 - Implemented Blinn-Phong shading for realistic lighting effects.

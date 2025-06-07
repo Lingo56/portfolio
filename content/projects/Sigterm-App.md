@@ -18,6 +18,10 @@ main = true
 
 Final project for IAT 167 - Intro to Game Development
 
+## Overview
+
+{{< spacer >}}
+
 - Built in Processing using Java
 - Implemented a GLSL shader for the background
 - Designed unique enemy behaviors and attack patterns per-stage
