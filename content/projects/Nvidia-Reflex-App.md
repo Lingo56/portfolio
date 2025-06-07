@@ -18,32 +18,35 @@ alt2="High GPU Load" >}}
 
 Final project for CMPT 353 - Computational Data Science
 
-- Developed critical data analysis programs in Python, utilizing SciPy, scikit-learn, Matplotlib, and Nvidia FrameView to analyze PC latency across various games.
-- Investigated the impact of Nvidia Reflex on input latency under different GPU loads and graphical settings.
-- Filtered and refined large datasets using machine learning techniques like LocalOutlierFactor to remove anomalies and smooth latency data.
-- Conducted statistical tests (t-tests, chi-squared tests) to confirm the significance of Reflex's impact on latency reduction.
+This was a project designed to have us utilize the data science tools we learned in class and apply them to a real world dataset. At the time I was diving deep into figuring out how to get the lowest latency possible out of my monitor. So, naturally I thought it would be perfect to gather a ton of latency data and analyize it for our final project!
 
-### Key Findings
+In the end my partner and I gathered data using Nvidia FrameView since getting data directly from our GPUs made the data much more consistent. From there we built tools to analyize Nvidia's generated .csv files with various python data science libraries.
 
-1. **Latency Reduction**:  
-   Reflex can significantly reduce latency, especially under high GPU load conditions. This was confirmed by t-tests with near-zero p-values.
+## Overview
 
-2. **Impact of Graphics Settings**:  
-   Reflex minimizes the increase in latency caused by higher graphical settings, with regression analysis showing a much lower slope for Reflex On compared to Reflex Off.
+{{< spacer >}}
 
-3. **Consistency Across Games**:  
-   Reflex's effectiveness is consistent across different games under high GPU load but shows minimal impact under low GPU load.
+- Built Python tools to analyze latency data.
+- Used machine learning to clean and smooth data.
+- Ran statistical tests to measure Nvidia Reflex’s impact.
 
-### Challenges and Limitations
+Key Findings:
 
-- **Hardware Variability**: The analysis did not account for differences in hardware configurations, which could influence Reflex's effectiveness.
-- **Shader Caching**: Some data may have been affected by stuttering due to uncompiled shaders during benchmarking.
+- Reflex greatly reduces latency, but mainly under high GPU load.
+- Reflex lessens the latency increase from higher graphics settings.
+- Reflex is almost placebo under low GPU load.
 
-### Tools and Techniques
+Challenges:
 
-- **Data Collection**: Used Nvidia FrameView to capture telemetry data, focusing on PC latency and frame timing.
-- **Data Visualization**: Created clear and informative graphs using Matplotlib, with Loess smoothing for better readability.
-- **Machine Learning**: Applied anomaly detection to refine datasets and ensure accurate analysis.
+- Results were difficult to keep consistent around a variety of hardware configs.
+- Data being affected by unpredictable variables (shader compilation, gameplay variation).
+
+Tools:
+
+- Python data science libraries: SciPy, scikit-learn, Matplotlib
+- Data collection: Nvidia FrameView
+- Machine learning: LocalOutlierFactor (for anomaly detection and smoothing)
+- Statistical analysis: t-test, chi-squared test
 
 ## GitHub Repository
 
