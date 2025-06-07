@@ -10,7 +10,7 @@ main = true
 
 {{< spacer >}}
 
-{{< video-player src="/videos/cdm-reel-compressed.mp4" poster="/images/video-poster.png" >}}
+{{< video-player src="/videos/cdm-reel-compressed.mp4" poster="/images/projects/CDM-App/CDM-App.png" fade="true" >}}
 
 ## Project Details
 

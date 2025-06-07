@@ -10,6 +10,7 @@
     poster="{{ .Get "poster" }}"
   ></video>
 </div>
+{{ if eq (lower (.Get "fade" | default "false")) "true" }}
 <script>
 (function() {
   var video = document.getElementById('myVideo-{{ .Get "id" | default (now.UnixNano) }}');
@@ -23,3 +24,4 @@
   });
 })();
 </script>
+{{ end }}
