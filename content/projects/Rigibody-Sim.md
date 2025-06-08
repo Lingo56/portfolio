@@ -20,7 +20,7 @@ Assignment for CMPT 466 - Animation
 
 {{< spacer >}}
 
-• Rigid body simulation built using forward dynamics.
-• Implemented collision detection, force/torque calculations, and semi-implicit integration for accurate object
-dynamics.
-• Adjusted various physics parameters (mass, spring constant, damping, friction) to match Unity’s physics engine.
+- Rigid body simulation built using forward dynamics.
+- Implemented collision detection, force/torque calculations, and semi-implicit integration for accurate object
+  dynamics.
+- Adjusted various physics parameters (mass, spring constant, damping, friction) to match Unity’s physics engine.
