@@ -1,7 +1,7 @@
 +++
 date = '2024-04-05T02:47:13-08:00'
 draft = false
-title = 'Center for Digital Media - Visual Database App'
+title = 'Center for Digital Media - Alumni Networking App'
 tags = ["unity", "mysql", "c♯"]
 summary = "A database platform for showcasing CDM student data through design-foward visualizations."
 image = "/images/projects/CDM-App/CDM-App.png"
@@ -16,24 +16,23 @@ main = true
 
 Semester Project for the CDM Digital Media Practicum
 
+A social networking platform for alumni browsing and networking. Designed from the ground up to be visually engaging and create a new visual language for the CDM as a brand.
+
 ## Overview
 
 {{< spacer >}}
 
-- Guided team through Unity development, providing key insights for crafting shaders and UI, resulting in a visually engaging and informative user experience.
-- Implemented a robust networking solution to seamlessly connect with a remote MariaDB database, facilitating real-time server access to alumni data.
-- Overcame challenges of mismanagement by restructuring the team, adopting a flat structure, and improving communication between developers, designers, and clients.
-- Developed a star shader inspired by Pixar's "Inside Out," iterating through multiple designs to meet the designer's vision.
-- Integrated Cinemachine for smooth camera transitions, enhancing the app's polished feel.
+- Led Unity development, graphics, and team coordination, advising designers on the technical boundaries of their concepts.
+- Collaborated with CDM IT to build real-time networking and connect Unity with a remote MySQL (MariaDB) alumni database.
+- Developed custom shaders and smooth camera transitions to meet designer concepts.
 
-Final Deliverables
+Final Deliverables:
 
-1. Unity-Based Alumni _App: A polished MVP focusing on high-quality presentation._
-2. Alumni Database: _A database filled with alumni data gathered throughout the semester_
-3. Web Visualization: _A basic React-based visualization hosted on the CDM's web stack._
+- Unity-based alumni app
+- Alumni database (MariaDB)
+- React components which connect to alumni database
 
-Challenges and Lessons Learned
+Challenges & Lessons:
 
-- Adapted to unclear project direction and solved problems without direct guides, improving confidence in tackling unknowns.
-- Enhanced communication skills by collaborating with a diverse team of designers and clients unfamiliar with 3D development.
-- Addressed technical challenges, such as integrating Unity with a database and creating performant shaders.
+- Organizing the team around our team leader leaving half way through the project.
+- Learned to colaborate with and implement designer concept sketches in a final deliverable app.
