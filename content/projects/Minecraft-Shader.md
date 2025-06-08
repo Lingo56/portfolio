@@ -26,3 +26,7 @@ Workshop built for the SFU Game Development Club
 ## GitHub Repository
 
 Check out the [source code on GitHub](https://github.com/Lingo56/mc-water).
+
+## Workshop Slides
+
+You can [download the workshop slides here (PDF)](/shader-workshop-slides.pdf)
