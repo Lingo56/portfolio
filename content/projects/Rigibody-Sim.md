@@ -10,11 +10,15 @@ main = true
 
 {{< spacer >}}
 
-{{< video-player src="/videos/rigidbody.mp4" poster="/images/projects/Rigidbody-Sim/Rigidbody-Sim.png" fade="false" >}}
+{{< video-player src="/videos/rigidbody.mp4" poster="/images/projects/Rigidbody-Sim/Rigidbody-Sim.png" fade="true" >}}
 
 ## Project Details
 
 Assignment for CMPT 466 - Animation
+
+White = My implementation
+
+Yellow = Unity implementation
 
 ## Overview
 

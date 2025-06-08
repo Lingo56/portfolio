@@ -23,10 +23,10 @@ Workshop built for the SFU Game Development Club
 - Thoroughly researched numerous algorithms to build a water shader implementaion that was both easy to teach and visually impressive
 - Designed presentation to teach attendees the modern GPU pipeline and how impressive visuals are crafted from a low level
 
-## GitHub Repository
-
-Check out the [source code on GitHub](https://github.com/Lingo56/mc-water).
-
 ## Workshop Slides
 
 You can [download the workshop slides here (PDF)](/shader-workshop-slides.pdf)
+
+## GitHub Repository
+
+Check out the [source code on GitHub](https://github.com/Lingo56/mc-water).
