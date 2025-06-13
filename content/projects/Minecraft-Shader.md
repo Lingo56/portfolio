@@ -16,9 +16,9 @@ main = true
 
 Workshop built for the SFU Game Development Club
 
-Took quite a few revisions and troubleshooting through various Minecraft forums, Discord servers, and reverse engineering existing shaders 😅. The documentation for Minecraft shaders is very sparse as it's mostly just a handful of people writing most of them.
+Took quite a few revisions and troubleshooting through various Minecraft forums, Discord servers, and reverse engineering existing shaders 😅. The documentation for Minecraft shaders is very sparse as it's mostly just a handful of people writing them.
 
-The other tricky thing was figuring out how to work around this and make this simple to understand and teach. I ended up using [this deconstruction of Nintendo's Wii-era water shader](https://youtu.be/8rCRsOLiO7k?si=nMAygUSA3lcX6Y1W) as a base since it's very simple to explain for its visual impact.
+The other tricky thing was still making the project straightforward to teach given the limited information to reference. I ended up mostly solving that by using [this Nintendo Wii-era water shader](https://youtu.be/8rCRsOLiO7k?si=nMAygUSA3lcX6Y1W) as a base since it's very simple to explain for its visual impact.
 
 In the end, everyone who attended the workshop seemed very excited about their end results, so I'd say it was a success!
 
