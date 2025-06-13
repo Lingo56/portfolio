@@ -26,4 +26,4 @@ Built with a team of 7, which dropped to 6 mid-project. This ended up being it's
 
 - Led Unity development, graphics, and team coordination, advising designers on the technical boundaries of their concepts.
 - Collaborated with CDM IT to build real-time networking and connect Unity with a remote MySQL (MariaDB) alumni database.
-- Developed custom shaders and s0mooth camera transitions to meet designer concepts.
+- Developed custom shaders and smooth camera transitions to meet designer concepts.
