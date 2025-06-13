@@ -22,33 +22,11 @@ Final project for CMPT 353 - Computational Data Science
 
 This was a project designed to have us utilize the data science tools we learned in class and apply them to a real world dataset. At the time I was diving deep into figuring out how to get the lowest latency possible out of my monitor. So, naturally I thought it would be perfect to gather a ton of latency data and analyize it for our final project!
 
-In the end my partner and I gathered data using Nvidia FrameView since getting data directly from our GPUs made the data much more consistent. From there we built tools to analyize Nvidia's generated .csv files with various python data science libraries.
+In the end my partner and I gathered data using Nvidia FrameView since getting data directly from our GPUs made the data much more consistent. From there we built tools in python to analyize Nvidia's generated .csv files with various data science libraries.
 
-## Overview
+## Final Report
 
-{{< spacer >}}
-
-- Built Python tools to analyze latency data.
-- Used machine learning to clean and smooth data.
-- Ran statistical tests to measure Nvidia Reflex’s impact.
-
-Key Findings:
-
-- Reflex greatly reduces latency, but mainly under high GPU load.
-- Reflex lessens the latency increase from higher graphics settings.
-- Reflex is almost placebo under low GPU load.
-
-Challenges:
-
-- Results were difficult to keep consistent around a variety of hardware configs.
-- Data being affected by unpredictable variables (shader compilation, gameplay variation).
-
-Tools:
-
-- Python data science libraries: SciPy, scikit-learn, Matplotlib
-- Data collection: Nvidia FrameView
-- Machine learning: LocalOutlierFactor (for anomaly detection and smoothing)
-- Statistical analysis: t-test, chi-squared test
+You can [download the report on our findings here (PDF)](/CMPT353-Report.pdf)
 
 ## GitHub Repository
 

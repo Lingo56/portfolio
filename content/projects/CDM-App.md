@@ -18,21 +18,12 @@ Semester Project for the CDM Digital Media Practicum
 
 A social networking platform for alumni browsing and networking. Designed from the ground up to be visually engaging and create a new visual language for the CDM as a brand.
 
+Built with a team of 7, which dropped to 6 mid-project. This ended up being it's own challenge since the member who left was the project manager. Our team needed to adjust on the fly to organizing around a flat structure.
+
 ## Overview
 
 {{< spacer >}}
 
 - Led Unity development, graphics, and team coordination, advising designers on the technical boundaries of their concepts.
 - Collaborated with CDM IT to build real-time networking and connect Unity with a remote MySQL (MariaDB) alumni database.
-- Developed custom shaders and smooth camera transitions to meet designer concepts.
-
-Final Deliverables:
-
-- Unity-based alumni app
-- Alumni database (MariaDB)
-- React components which connect to alumni database
-
-Challenges & Lessons:
-
-- Organizing the team around our team leader leaving half way through the project.
-- Learned to colaborate with and implement designer concept sketches in a final deliverable app.
+- Developed custom shaders and s0mooth camera transitions to meet designer concepts.
