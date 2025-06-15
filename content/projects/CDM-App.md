@@ -18,7 +18,7 @@ Semester Project for the CDM Digital Media Practicum
 
 A social networking platform for alumni browsing and networking. Designed from the ground up to be visually engaging and create a new visual language for the CDM as a brand.
 
-Built with a team of 7, which dropped to 6 mid-project. This ended up being it's own challenge since the member who left was the project manager. Our team needed to adjust on the fly to organizing around a flat structure.
+Built with a team of designers and programmers at the CDM. We had our own complexities come up with the team makeup which led us from having a flat structure mid-way through the semester. In the end, however, everyone invloved loved the final result!
 
 ## Overview
 
