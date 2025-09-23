@@ -1,4 +1,4 @@
-baseURL = "https://lingo56.github.io/portfolio/"
+baseURL = "petersoava.site"
 languageCode = 'en-us'
 title = 'Peter Soava'
 theme = 'risotto'
