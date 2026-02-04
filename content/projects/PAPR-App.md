@@ -3,7 +3,7 @@ date = '2025-12-05T02:47:13-08:00'
 draft = false
 title = 'PAPR Point Cloud Editor'
 tags = ["python", "pytorch", "cuda"]
-summary = "Interactive point cloud selection and transformation UI for the PAPR algorithm"
+summary = "Interactive point cloud selection and transformation UI for the PAPR algorithm."
 image = "/images/projects/PAPR-App/PAPR-App.png"
 main = true
 +++

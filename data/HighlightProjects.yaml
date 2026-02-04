@@ -2,7 +2,12 @@
   apptitle: CDM-App
   type: Unity
   image: /images/projects/CDM-App/CDM-App.png
-  description: A database platform for showcasing CDM student data through design-foward visualizations.
+  description: A database platform for showcasing CDM student data through a design-foward visualization.
+- displaytitle: PAPR Point Cloud Editor
+  apptitle: PAPR-App
+  type: pytorch
+  image: /images/projects/PAPR-App/PAPR-App.png
+  description: Interactive point cloud selection and transformation UI for the PAPR algorithm.
 - displaytitle: Minecraft Shader Workshop
   apptitle: Minecraft-Shader
   type: glsl
