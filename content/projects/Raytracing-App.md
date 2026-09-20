@@ -30,18 +30,18 @@ We only implemented Peter Shirley's "Raytracing in a Weekend" as far we needed t
 
 {{< spacer >}}
 
-- Improved ray distribution with a quasi-random algorithm for improved performance and visual quality.
-- Optimized with expression templates, multi-threading, and stable RNG for parallelism, achieving 230% faster performance.
-- Implemented dynamic mapping for threads and static mapping for MPI to balance workloads for each solution effectively.
-- Integrated the 'Blaze' library for high-performance vector and matrix computations from its expression templates.
-- Ensured thread-safe randomization to prevent multithread related race conditions.
+- Modified the random ray distribution algorithm to be quasi-random to improve performance and visuals.
+- Optimized the raytracer with expression templates, multi-threading, and stable RNG for parallelism. We gained about a 250% perf boost compared to the original algorithm.
+- Implemented dynamic mapping for threads and static mapping for MPI so each type of parallelism workload was properly distributed.
+- Added the 'Blaze' C++ math library for high-performance vector and matrix computations from its expression templates.
+- Integraded and thouroughly tested thread-safe randomization to prevent multithread related race conditions.
 
-Challenges and Lessons Learned
+Issues we found
 
 - Found performance bottlenecks due to missed vectorization opportunities and library overhead.
-- Debugged thread safety issues, particularly with random number generation, which caused critical rendering errors.
+- We had our visuals breaking catastrophically from our multithreading not being thread safe at first. We had to adjust our implementation pretty significantly to make it thread-safe.
 - Ended up with diminishing returns with additional threads, potentially due to library inefficiencies, poor task scheduling on our part, or bad compiler settings.
 
-## GitHub Repository
+## GitHub Repo
 
-Check out the [source code on GitHub](https://github.com/Lingo56/mpi-raytrace).
+Check out the [source code!](https://github.com/Lingo56/mpi-raytrace).
