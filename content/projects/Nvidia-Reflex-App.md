@@ -28,6 +28,6 @@ In the end my partner and I gathered data using Nvidia FrameView since getting d
 
 You can [download the report on our findings here (PDF)](/CMPT353-Report.pdf)
 
-## GitHub Repository
+## GitHub Repo
 
-Check out the [source code on GitHub](https://github.com/cbrad2001/cmpt353prj).
+Check out the [source code!](https://github.com/cbrad2001/cmpt353prj).
